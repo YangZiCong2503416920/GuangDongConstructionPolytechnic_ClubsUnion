@@ -1,0 +1,265 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.nav-logo {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin-left: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: #34495e;
+}
+
+/* 首页样式 */
+.section-home {
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 1200px;
+    background-color: white;
+}
+
+.banner {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.quick-links {
+    margin-top: 2rem;
+}
+
+.quick-links h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.quick-links ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.quick-links li {
+    margin-bottom: 1rem;
+}
+
+.quick-links a {
+    display: block;
+    padding: 1rem;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.quick-links a:hover {
+    background-color: #2980b9;
+}
+
+/* 精选活动页样式 */
+.section-activities {
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 1200px;
+    background-color: white;
+}
+
+.activity-content {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.activity-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.activity-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.activity-list {
+    flex: 1;
+    min-width: 300px;
+}
+
+.activity-list h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.activity-list ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #ecf0f1;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.activity-list li {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background-color: white;
+    border-radius: 4px;
+    border-left: 4px solid #3498db;
+}
+
+/* 所有社团页样式 */
+.section-clubs {
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 1200px;
+    background-color: white;
+}
+
+.club-filters {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.filter-btn {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #3498db;
+    color: white;
+}
+
+.club-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.club-item {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.club-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.club-item h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* 关于我们页样式 */
+.section-about {
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 1200px;
+    background-color: white;
+}
+
+.section-about h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.section-about p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        margin-top: 1rem;
+    }
+
+    .nav-link {
+        margin: 0.5rem;
+    }
+
+    .activity-content {
+        flex-direction: column;
+    }
+
+    .section-home, .section-activities, .section-clubs, .section-about {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
