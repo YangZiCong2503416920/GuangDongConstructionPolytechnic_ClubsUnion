@@ -46,9 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
         if (window.scrollY > 50) {
-            navbar.style.backgroundColor = 'rgba(44, 62, 80, 0.95)';
+            navbar.style.background = 'linear-gradient(135deg, rgba(26, 37, 47, 0.95) 0%, rgba(52, 73, 94, 0.95) 100%)';
         } else {
-            navbar.style.backgroundColor = 'rgba(44, 62, 80, 1)';
+            navbar.style.background = 'linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(52, 74, 94, 0.9) 100%)';
         }
     });
 
@@ -291,7 +291,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('favorites', JSON.stringify(favorites));
 
         // 更新按钮状态
-        const favoriteBtn = document.querySelector(`[data-name="${document.querySelector(`[data-name*="${clubId}"]`).getAttribute('data-name')}"] .favorite-btn`);
+        const favoriteBtn = document.querySelector(`[data-name*="${clubId}"] .favorite-btn`);
         if (favoriteBtn) {
             favoriteBtn.classList.toggle('favorited');
             const heart = favoriteBtn.querySelector('.heart');
