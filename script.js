@@ -46,9 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
         if (window.scrollY > 50) {
-            navbar.style.backgroundColor = '#1a252f';
+            navbar.style.backgroundColor = 'rgba(44, 62, 80, 0.95)';
         } else {
-            navbar.style.backgroundColor = '#2c3e50';
+            navbar.style.backgroundColor = 'rgba(44, 62, 80, 1)';
         }
     });
 
@@ -110,10 +110,20 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p>联系: ${club.contact}</p>
                     <p class="club-description">${club.description}</p>
                     <div class="club-actions">
+                        <button class="favorite-btn" onclick="toggleFavorite('${club.id}')">
+                            <span class="heart">❤</span>
+                        </button>
                         <button class="detail-btn" onclick="showClubDetails('${club.id}')">详情</button>
                         <button class="register-btn" onclick="registerClub('${club.id}')">报名</button>
                     </div>
                 `;
+
+                // 检查是否已收藏
+                if (isFavorite(club.id)) {
+                    const favoriteBtn = clubItem.querySelector('.favorite-btn');
+                    favoriteBtn.classList.add('favorited');
+                    favoriteBtn.querySelector('.heart').textContent = '❤';
+                }
 
                 clubListContainer.appendChild(clubItem);
             });
@@ -263,6 +273,108 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // 收藏功能
+    function toggleFavorite(clubId) {
+        let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+        const index = favorites.indexOf(clubId);
+
+        if (index > -1) {
+            // 取消收藏
+            favorites.splice(index, 1);
+            showNotification('已取消收藏', 'info');
+        } else {
+            // 添加收藏
+            favorites.push(clubId);
+            showNotification('已添加收藏', 'success');
+        }
+
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+
+        // 更新按钮状态
+        const favoriteBtn = document.querySelector(`[data-name="${document.querySelector(`[data-name*="${clubId}"]`).getAttribute('data-name')}"] .favorite-btn`);
+        if (favoriteBtn) {
+            favoriteBtn.classList.toggle('favorited');
+            const heart = favoriteBtn.querySelector('.heart');
+            heart.textContent = favoriteBtn.classList.contains('favorited') ? '❤' : '♡';
+        }
+    }
+
+    // 检查是否已收藏
+    function isFavorite(clubId) {
+        const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+        return favorites.includes(clubId);
+    }
+
+    // 显示通知
+    function showNotification(message, type) {
+        // 创建通知元素
+        const notification = document.createElement('div');
+        notification.className = `notification ${type}`;
+        notification.textContent = message;
+
+        // 设置样式
+        Object.assign(notification.style, {
+            position: 'fixed',
+            top: '20px',
+            right: '20px',
+            padding: '15px 20px',
+            borderRadius: '8px',
+            color: 'white',
+            zIndex: '9999',
+            fontWeight: '500',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+            animation: 'slideIn 0.3s ease, fadeOut 0.5s ease 2.5s forwards',
+            maxWidth: '300px',
+            wordWrap: 'break-word'
+        });
+
+        // 根据类型设置背景色
+        switch(type) {
+            case 'success':
+                notification.style.background = 'linear-gradient(135deg, #27ae60 0%, #2ecc71 100%)';
+                break;
+            case 'info':
+                notification.style.background = 'linear-gradient(135deg, #3498db 0%, #2ecc71 100%)';
+                break;
+            default:
+                notification.style.background = 'linear-gradient(135deg, #f39c12 0%, #e67e22 100%)';
+        }
+
+        document.body.appendChild(notification);
+
+        // 3秒后移除通知
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 3000);
+    }
+
+    // 添加CSS动画
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+
     // 社团详情查看功能
     window.showClubDetails = function(clubId) {
         // 从JSON数据中获取社团详情
@@ -277,6 +389,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const modalDescription = document.getElementById('modalDescription');
                     const modalContact = document.getElementById('modalContact');
                     const modalRegisterBtn = document.getElementById('modalRegisterBtn');
+                    const modalFavoriteBtn = document.getElementById('modalFavoriteBtn');
 
                     modalTitle.textContent = club.name;
                     modalDescription.textContent = club.description;
@@ -287,6 +400,22 @@ document.addEventListener('DOMContentLoaded', function() {
                         registerClub(clubId);
                         modal.style.display = 'none';
                     };
+
+                    // 更新收藏按钮的事件
+                    if (modalFavoriteBtn) {
+                        modalFavoriteBtn.onclick = function() {
+                            toggleFavorite(clubId);
+                        };
+
+                        // 更新收藏按钮状态
+                        if (isFavorite(clubId)) {
+                            modalFavoriteBtn.classList.add('favorited');
+                            modalFavoriteBtn.innerHTML = '❤ 已收藏';
+                        } else {
+                            modalFavoriteBtn.classList.remove('favorited');
+                            modalFavoriteBtn.innerHTML = '♡ 收藏';
+                        }
+                    }
 
                     modal.style.display = 'block';
                 }
