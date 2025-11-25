@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活动详情 - 广东建设职业技术学院社团门户</title>
+    <!-- 基础样式 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/pages/activity-detail.css">
+    <!-- 组件样式 -->
+    <link rel="stylesheet" href="./css/components/navbar.css">
+    <link rel="stylesheet" href="./css/components/form.css">
+    <link rel="stylesheet" href="./css/components/modal.css">
+    <!-- 3.0 预留：框架样式 -->
+    <link rel="stylesheet" href="./css/framework.css" id="framework-styles" disabled>
+</head>
+<body data-page="activity-detail" data-activity-id="">
+<!-- 3.0 预留：框架根节点 -->
+<div id="vue-app" style="display: none;"></div>
+
+<!-- 2.x 内容容器 -->
+<div id="app">
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">社团门户</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="activities.html" class="nav-link active">精选活动</a></li>
+                <li><a href="clubs.html" class="nav-link">所有社团</a></li>
+                <li><a href="profile.html" class="nav-link">个人中心</a></li>
+                <li><a href="about.html" class="nav-link">关于我们</a></li>
+            </ul>
+            <div class="nav-auth" id="nav-auth">
+                <a href="login.html" class="nav-btn">登录</a>
+                <a href="register.html" class="nav-btn secondary">注册</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="main-content">
+        <div class="activity-detail-container">
+            <!-- 活动详情加载中 -->
+            <div class="loading-placeholder" id="activity-loading" style="display: block;">
+                <div class="loading-spinner"></div>
+                <p>加载活动详情...</p>
+            </div>
+
+            <!-- 活动详情内容（默认隐藏） -->
+            <article class="activity-detail-content" id="activity-content" style="display: none;">
+                <header class="activity-header">
+                    <h1 class="activity-title" id="activity-title">活动标题</h1>
+                    <div class="activity-meta">
+                        <span class="activity-category" id="activity-category">分类</span>
+                        <span class="activity-status" id="activity-status">状态</span>
+                    </div>
+                </header>
+
+                <div class="activity-main">
+                    <div class="activity-image" id="activity-image">
+                        <!-- 活动图片由JS设置 -->
+                    </div>
+
+                    <div class="activity-info">
+                        <div class="info-section">
+                            <h3>活动信息</h3>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <label>主办方：</label>
+                                    <span id="activity-organizer">主办方</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>活动时间：</label>
+                                    <span id="activity-time">时间</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>报名截止：</label>
+                                    <span id="activity-deadline">截止时间</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>活动地点：</label>
+                                    <span id="activity-location">地点</span>
+                                </div>
+                                <div class="info-item">
+                                    <label>报名人数：</label>
+                                    <span id="activity-participants">0</span>
+                                    <span>/</span>
+                                    <span id="activity-limit">不限</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>活动介绍</h3>
+                            <div class="activity-description" id="activity-description">
+                                活动描述内容...
+                            </div>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>报名要求</h3>
+                            <div class="activity-requirements" id="activity-requirements">
+                                报名要求...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-actions">
+                    <button class="btn-primary" id="registerBtn" disabled>立即报名</button>
+                    <button class="btn-secondary" id="shareBtn">分享活动</button>
+                </div>
+
+                <!-- 报名表单（默认隐藏） -->
+                <div class="registration-form" id="registrationForm" style="display: none;">
+                    <h3>报名信息</h3>
+                    <form id="registrationFormElement">
+                        <div class="form-group">
+                            <label for="realName">真实姓名</label>
+                            <input type="text" id="realName" name="realName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="studentId">学号</label>
+                            <input type="text" id="studentId" name="studentId" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">手机号</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="additionalInfo">备注信息</label>
+                            <textarea id="additionalInfo" name="additionalInfo"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">提交报名</button>
+                            <button type="button" class="btn-secondary" id="cancelRegistration">取消</button>
+                        </div>
+                    </form>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- 报名成功模态框 -->
+    <div class="modal" id="successModal" style="display: none;">
+        <div class="modal-content">
+            <h3>报名成功！</h3>
+            <p>您已成功报名该活动，请注意查收确认邮件。</p>
+            <button class="btn-primary" id="closeModal">确定</button>
+        </div>
+    </div>
+</div>
+
+<!-- 3.0 预留：框架入口 -->
+<script src="./js/framework.js" id="framework-js" disabled></script>
+
+<!-- 2.x 核心脚本 -->
+<script type="module">
+    // 3.0 预留：框架检测
+    if (window.useFramework) {
+        document.getElementById('vue-app').style.display = 'block';
+        document.getElementById('app').style.display = 'none';
+        document.getElementById('framework-styles').disabled = false;
+        document.getElementById('framework-js').disabled = false;
+    }
+</script>
+<script type="module" src="./js/core/auth.js"></script>
+<script type="module" src="./js/core/api.js"></script>
+<script type="module" src="./js/core/utils.js"></script>
+<script type="module" src="./js/pages/activity-detail.js"></script>
+</body>
+</html>

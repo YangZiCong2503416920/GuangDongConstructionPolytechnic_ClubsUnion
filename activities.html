@@ -3,39 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>广东建设职业技术学院社团融合门户 - 精选活动</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<nav class="navbar">
-  <div class="nav-container">
-    <h1 class="nav-logo">广建院社团门户</h1>
-    <ul class="nav-menu">
-      <li><a href="index.html" class="nav-link">首页</a></li>
-      <li><a href="activities.html" class="nav-link active">精选活动</a></li>
-      <li><a href="clubs.html" class="nav-link">所有社团</a></li>
-      <li><a href="about.html" class="nav-link">关于我们</a></li>
-    </ul>
-  </div>
-</nav>
+  <title>精选活动 - 广东建设职业技术学院社团门户</title>
 
-<main>
-  <section id="activities" class="section-activities">
-    <h2>精选活动</h2>
-    <div class="activity-content">
-      <div class="activity-image">
-        <img src="https://img.alicdn.com/tfs/TB1L7RUk.uF3KVjSZKbXXXA2pXa-1200-400.jpg" alt="活动图片">
-      </div>
-      <div class="activity-list">
-        <h2>近期活动</h2>
-        <ul>
-          <!-- 动态内容将由JavaScript填充 -->
-        </ul>
+  <!-- 基础样式 -->
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <!-- 组件样式 -->
+  <link rel="stylesheet" href="./css/components/navbar.css">
+  <link rel="stylesheet" href="./css/components/form.css">
+  <link rel="stylesheet" href="./css/components/activity-card.css">
+  <!-- 页面样式 -->
+  <link rel="stylesheet" href="./css/pages/activities.css">
+</head>
+<body data-page="activities">
+<div id="app">
+  <!-- 导航栏 -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <h1 class="nav-logo">社团门户</h1>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">首页</a></li>
+        <li><a href="activities.html" class="nav-link active">精选活动</a></li>
+        <li><a href="clubs.html" class="nav-link">所有社团</a></li>
+        <li><a href="profile.html" class="nav-link">个人中心</a></li>
+        <li><a href="about.html" class="nav-link">关于我们</a></li>
+      </ul>
+      <div class="nav-auth" id="nav-auth">
+        <a href="login.html" class="nav-btn">登录</a>
+        <a href="register.html" class="nav-btn secondary">注册</a>
       </div>
     </div>
-  </section>
-</main>
+  </nav>
 
-<script src="script.js"></script>
+  <!-- 主内容 -->
+  <main class="main-content">
+    <div class="activities-container">
+      <div class="activities-header">
+        <h1 class="activities-title">精选活动</h1>
+        <div class="activities-filters">
+          <select id="statusFilter" class="filter-select">
+            <option value="">全部状态</option>
+            <option value="upcoming">即将开始</option>
+            <option value="ongoing">进行中</option>
+            <option value="completed">已结束</option>
+          </select>
+          <select id="categoryFilter" class="filter-select">
+            <option value="">全部分类</option>
+            <option value="academic">学术</option>
+            <option value="art">艺术</option>
+            <option value="sports">体育</option>
+            <option value="public-service">公益服务</option>
+            <option value="culture">文化</option>
+            <option value="technology">技术</option>
+            <option value="other">其他</option>
+          </select>
+          <input type="text" id="searchInput" class="filter-input" placeholder="搜索活动...">
+        </div>
+      </div>
+
+      <!-- 活动列表 -->
+      <div class="activities-grid" id="activities-list">
+        <!-- 3.0 预留：框架渲染区域 -->
+        <div class="loading-placeholder" id="activities-loading">
+          <div class="loading-spinner"></div>
+          <p>加载活动列表中...</p>
+        </div>
+      </div>
+
+      <!-- 分页 -->
+      <div class="pagination" id="activities-pagination">
+        <!-- 分页控件由JS生成 -->
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- 核心工具库 -->
+<script type="module" src="./js/core/auth.js"></script>
+<script type="module" src="./js/core/api.js"></script>
+<script type="module" src="./js/core/utils.js"></script>
+
+<!-- 页面逻辑 -->
+<script type="module" src="./js/pages/activities.js"></script>
 </body>
 </html>

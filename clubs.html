@@ -3,61 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>广东建设职业技术学院社团融合门户 - 所有社团</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>所有社团 - 广东建设职业技术学院社团门户</title>
+
+  <!-- 基础样式 -->
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <!-- 组件样式 -->
+  <link rel="stylesheet" href="./css/components/navbar.css">
+  <link rel="stylesheet" href="./css/components/form.css">
+  <link rel="stylesheet" href="./css/components/activity-card.css">
+  <!-- 页面样式 -->
+  <link rel="stylesheet" href="./css/pages/clubs.css">
 </head>
-<body>
-<nav class="navbar">
-  <div class="nav-container">
-    <h1 class="nav-logo">广建院社团门户</h1>
-    <ul class="nav-menu">
-      <li><a href="index.html" class="nav-link">首页</a></li>
-      <li><a href="activities.html" class="nav-link">精选活动</a></li>
-      <li><a href="clubs.html" class="nav-link active">所有社团</a></li>
-      <li><a href="about.html" class="nav-link">关于我们</a></li>
-    </ul>
-  </div>
-</nav>
-
-<main>
-  <section id="clubs" class="section-clubs">
-    <h2>所有社团</h2>
-
-    <!-- 搜索框 -->
-    <div class="search-container">
-      <input type="text" id="searchInput" placeholder="搜索社团名称..." class="search-input">
-      <button id="searchButton" class="search-btn">搜索</button>
+<body data-page="clubs">
+<div id="app">
+  <!-- 导航栏 -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <h1 class="nav-logo">社团门户</h1>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">首页</a></li>
+        <li><a href="activities.html" class="nav-link">精选活动</a></li>
+        <li><a href="clubs.html" class="nav-link active">所有社团</a></li>
+        <li><a href="profile.html" class="nav-link">个人中心</a></li>
+        <li><a href="about.html" class="nav-link">关于我们</a></li>
+      </ul>
+      <div class="nav-auth" id="nav-auth">
+        <a href="login.html" class="nav-btn">登录</a>
+        <a href="register.html" class="nav-btn secondary">注册</a>
+      </div>
     </div>
+  </nav>
 
-    <div class="club-filters">
-      <button class="filter-btn active" data-category="all">全部</button>
-      <button class="filter-btn" data-category="academic">学术</button>
-      <button class="filter-btn" data-category="art">艺术</button>
-      <button class="filter-btn" data-category="sports">体育</button>
-      <button class="filter-btn" data-category="public-service">公益服务</button>
-      <button class="filter-btn" data-category="culture">文化</button>
-      <button class="filter-btn" data-category="technology">技术</button>
-      <button class="filter-btn" data-category="other">其他</button>
+  <!-- 主内容 -->
+  <main class="main-content">
+    <div class="clubs-container">
+      <div class="clubs-header">
+        <h1 class="clubs-title">所有社团</h1>
+        <div class="clubs-filters">
+          <select id="categoryFilter" class="filter-select">
+            <option value="">全部分类</option>
+            <option value="academic">学术</option>
+            <option value="art">艺术</option>
+            <option value="sports">体育</option>
+            <option value="public-service">公益服务</option>
+            <option value="culture">文化</option>
+            <option value="technology">技术</option>
+            <option value="other">其他</option>
+          </select>
+          <input type="text" id="searchInput" class="filter-input" placeholder="搜索社团...">
+        </div>
+      </div>
+
+      <!-- 社团列表 -->
+      <div class="clubs-grid" id="clubs-list">
+        <!-- 3.0 预留：框架渲染区域 -->
+        <div class="loading-placeholder" id="clubs-loading">
+          <div class="loading-spinner"></div>
+          <p>加载社团列表中...</p>
+        </div>
+      </div>
+
+      <!-- 分页 -->
+      <div class="pagination" id="clubs-pagination">
+        <!-- 分页控件由JS生成 -->
+      </div>
     </div>
-
-    <div class="club-list" id="clubList">
-      <!-- 社团项目将由JavaScript动态加载 -->
-      <div class="loading">正在加载社团数据...</div>
-    </div>
-  </section>
-</main>
-
-<!-- 社团详情模态框 -->
-<div id="clubModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3 id="modalTitle"></h3>
-    <p id="modalDescription"></p>
-    <p>联系邮箱: <span id="modalContact"></span></p>
-    <button id="modalRegisterBtn" class="register-btn">立即报名</button>
-  </div>
+  </main>
 </div>
 
-<script src="script.js"></script>
+<!-- 核心工具库 -->
+<script type="module" src="./js/core/auth.js"></script>
+<script type="module" src="./js/core/api.js"></script>
+<script type="module" src="./js/core/utils.js"></script>
+
+<!-- 页面逻辑 -->
+<script type="module" src="./js/pages/clubs.js"></script>
 </body>
 </html>

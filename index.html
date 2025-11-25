@@ -3,39 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>广东建设职业技术学院社团融合门户 - 首页</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>首页 - 广东建设职业技术学院社团门户</title>
+    <!-- 基础样式 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/pages/home.css">
+    <!-- 组件样式 -->
+    <link rel="stylesheet" href="./css/components/navbar.css">
+    <link rel="stylesheet" href="./css/components/banner.css">
+    <link rel="stylesheet" href="./css/components/form.css">
+    <!-- 3.0 预留：框架样式 -->
+    <link rel="stylesheet" href="./css/framework.css" id="framework-styles" disabled>
 </head>
-<body>
-<nav class="navbar">
-    <div class="nav-container">
-        <h1 class="nav-logo">广建院社团门户</h1>
-        <ul class="nav-menu">
-            <li><a href="index.html" class="nav-link active">首页</a></li>
-            <li><a href="activities.html" class="nav-link">精选活动</a></li>
-            <li><a href="clubs.html" class="nav-link">所有社团</a></li>
-            <li><a href="about.html" class="nav-link">关于我们</a></li>
-        </ul>
-    </div>
-</nav>
+<body data-page="home">
+<!-- 3.0 预留：框架根节点 -->
+<div id="vue-app" style="display: none;"></div>
 
-<main>
-    <section id="home" class="section-home">
-        <div class="banner">
-            <img src="images/banner.jpg" alt="社团活动展示">
-        </div>
-        <h2>欢迎来到广东建设职业技术学院社团门户</h2>
-        <p>在这里，您可以了解丰富多彩的社团活动，找到志同道合的朋友，拓展自己的兴趣爱好。</p>
-
-        <div class="quick-links">
-            <h2>快速入口</h2>
-            <ul>
-                <!-- 动态内容将由JavaScript填充 -->
+<!-- 2.x 内容容器 -->
+<div id="app">
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">社团门户</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">首页</a></li>
+                <li><a href="activities.html" class="nav-link">精选活动</a></li>
+                <li><a href="clubs.html" class="nav-link">所有社团</a></li>
+                <li><a href="profile.html" class="nav-link">个人中心</a></li>
+                <li><a href="about.html" class="nav-link">关于我们</a></li>
             </ul>
+            <div class="nav-auth" id="nav-auth">
+                <a href="login.html" class="nav-btn">登录</a>
+                <a href="register.html" class="nav-btn secondary">注册</a>
+            </div>
         </div>
-    </section>
-</main>
+    </nav>
 
-<script src="script.js"></script>
+    <!-- 主内容 -->
+    <main class="main-content">
+        <!-- 横幅区域 -->
+        <section class="section-home">
+            <div class="home-banner">
+                <div class="home-banner-content">
+                    <div class="home-banner-text">
+                        <h1 class="home-banner-title">发现你的兴趣社团</h1>
+                        <p class="home-banner-subtitle">加入我们，开启精彩的校园生活</p>
+                        <a href="clubs.html" class="home-banner-btn">探索社团</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 特色功能 -->
+            <section class="features-section">
+                <h2 class="features-title">特色功能</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3 class="feature-title">社团发现</h3>
+                        <p class="feature-description">浏览各类社团，找到志同道合的伙伴</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3 class="feature-title">活动报名</h3>
+                        <p class="feature-description">参与精彩活动，丰富校园生活体验</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3 class="feature-title">社交互动</h3>
+                        <p class="feature-description">与社团成员交流，拓展人脉关系</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3 class="feature-title">成就展示</h3>
+                        <p class="feature-description">记录参与活动，展示个人成长历程</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 热门活动 -->
+            <section class="popular-section">
+                <h2 class="popular-title">热门活动</h2>
+                <div class="popular-grid" id="popular-activities">
+                    <!-- 3.0 预留：框架渲染区域 -->
+                    <div class="loading-placeholder" id="activities-loading">加载中...</div>
+                </div>
+            </section>
+
+            <!-- 最新社团 -->
+            <section class="clubs-section">
+                <h2 class="clubs-title">最新社团</h2>
+                <div class="clubs-grid" id="latest-clubs">
+                    <!-- 3.0 预留：框架渲染区域 -->
+                    <div class="loading-placeholder" id="clubs-loading">加载中...</div>
+                </div>
+            </section>
+
+            <!-- 统计数据 -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number" id="total-clubs">0</span>
+                        <span class="stat-label">社团总数</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="total-members">0</span>
+                        <span class="stat-label">成员总数</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="total-activities">0</span>
+                        <span class="stat-label">活动总数</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="total-events">0</span>
+                        <span class="stat-label">本月活动</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="home-footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="clubs.html">社团列表</a></li>
+                    <li><a href="activities.html">活动中心</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">使用指南</a></li>
+                    <li><a href="#">技术支持</a></li>
+                    <li><a href="#">反馈建议</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>关注我们</h4>
+                <ul>
+                    <li><a href="#">微信公众号</a></li>
+                    <li><a href="#">微博</a></li>
+                    <li><a href="#">QQ群</a></li>
+                    <li><a href="#">官方邮箱</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 广东建设职业技术学院 社团联合会. 保留所有权利.</p>
+        </div>
+    </footer>
+</div>
+
+<!-- 3.0 预留：框架入口 -->
+<script src="./js/framework.js" id="framework-js" disabled></script>
+
+<!-- 2.x 核心脚本 -->
+<script type="module">
+    // 3.0 预留：框架检测
+    if (window.useFramework) {
+        document.getElementById('vue-app').style.display = 'block';
+        document.getElementById('app').style.display = 'none';
+        document.getElementById('framework-styles').disabled = false;
+        document.getElementById('framework-js').disabled = false;
+    }
+</script>
+<script type="module" src="./js/core/auth.js"></script>
+<script type="module" src="./js/core/api.js"></script>
+<script type="module" src="./js/core/utils.js"></script>
+<script type="module" src="./js/pages/home.js"></script>
 </body>
 </html>

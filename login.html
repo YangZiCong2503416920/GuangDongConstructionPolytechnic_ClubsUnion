@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - 广东建设职业技术学院社团门户</title>
+    <!-- 基础样式 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <!-- 组件样式 -->
+    <link rel="stylesheet" href="./css/components/navbar.css">
+    <link rel="stylesheet" href="./css/components/form.css">
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="./css/pages/login.css">
+</head>
+<body data-page="login">
+<div id="app">
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">社团门户</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="activities.html" class="nav-link">精选活动</a></li>
+                <li><a href="clubs.html" class="nav-link">所有社团</a></li>
+                <li><a href="profile.html" class="nav-link">个人中心</a></li>
+                <li><a href="about.html" class="nav-link">关于我们</a></li>
+            </ul>
+            <div class="nav-auth">
+                <a href="login.html" class="nav-btn active">登录</a>
+                <a href="register.html" class="nav-btn secondary">注册</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 登录表单 -->
+    <main class="main-content">
+        <div class="login-container">
+            <div class="login-card">
+                <h2 class="login-title">欢迎登录</h2>
+                <p class="login-subtitle">广东建设职业技术学院社团门户</p>
+
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="username" class="form-label">用户名</label>
+                        <input type="text" id="username" class="form-input" placeholder="请输入用户名" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">密码</label>
+                        <input type="password" id="password" class="form-input" placeholder="请输入密码" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-checkbox">
+                            <input type="checkbox" id="rememberMe">
+                            <span class="checkbox-text">记住我</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="form-button primary">登录</button>
+                </form>
+
+                <div class="login-footer">
+                    <p>没有账号？ <a href="register.html">立即注册</a></p>
+                    <p><a href="index.html">返回首页</a></p>
+                </div>
+
+                <!-- 测试账号信息 -->
+                <div class="test-accounts">
+                    <h4>测试账号（可直接使用）：</h4>
+                    <div class="test-account">
+                        <strong>账号1：</strong> testuser / 123456
+                    </div>
+                    <div class="test-account">
+                        <strong>账号2：</strong> admin / admin123
+                    </div>
+                    <div class="test-account">
+                        <strong>账号3：</strong> student / student123
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- 核心工具库 -->
+<script type="module" src="./js/core/auth.js"></script>
+<script type="module" src="./js/core/api.js"></script>
+<script type="module" src="./js/core/utils.js"></script>
+<script type="module" src="./js/pages/login.js"></script>
+</body>
+</html>
+
+
+

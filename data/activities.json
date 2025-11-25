@@ -1,0 +1,28 @@
+{
+  "activities": [
+    {
+      "id": "act_001",
+      "title": "校园摄影大赛",
+      "description": "用镜头记录校园美好瞬间，优秀作品将展出在图书馆...",
+      "date": "2025-12-10T09:00:00",
+      "location": "图书馆一楼展厅",
+      "organizer": "摄影社",
+      "clubId": "club_photo",
+      "maxParticipants": 50,
+      "currentParticipants": 23,
+      "poster": "/assets/images/photo-contest.jpg"
+    },
+    {
+      "id": "act_002",
+      "title": "编程马拉松",
+      "description": "24小时极限编程挑战，赢取千元奖金！",
+      "date": "2025-12-15T18:00:00",
+      "location": "信息楼301",
+      "organizer": "ACM协会",
+      "clubId": "club_acm",
+      "maxParticipants": 100,
+      "currentParticipants": 78,
+      "poster": "/assets/images/coding-marathon.jpg"
+    }
+  ]
+}

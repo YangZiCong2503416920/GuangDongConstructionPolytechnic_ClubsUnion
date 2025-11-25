@@ -5,11 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7e46e39-5649-40d3-80e7-642e1d495ab3" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Forgot-password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/activity-detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/activity-card.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/banner.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/calendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/modal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/pages/activities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/pages/activity-detail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/pages/clubs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/pages/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/pages/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/pages/profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/activities.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/clubs.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Project.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Project_Done.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/api-spec-v3.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/cache.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/pages/activities.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/pages/activity-detail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/pages/clubs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/pages/home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/pages/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/pages/profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Releases.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/activities.html" beforeDir="false" afterPath="$PROJECT_DIR$/activities.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubs-data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubs.html" beforeDir="false" afterPath="$PROJECT_DIR$/clubs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/base.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +59,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="tsconfig.json" />
         <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
@@ -56,6 +97,13 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Code\GuangDongConstructionPolytechnicClubsUnion\docs" />
+      <recent name="E:\Code\GuangDongConstructionPolytechnicClubsUnion\assets" />
+      <recent name="E:\Code\GuangDongConstructionPolytechnicClubsUnion\css" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/GuangDongConstructionPolytechnicClubsUnion/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -84,7 +132,8 @@
       <workItem from="1763989272071" duration="1247000" />
       <workItem from="1763990676920" duration="94000" />
       <workItem from="1764039834055" duration="4252000" />
-      <workItem from="1764044623611" duration="8916000" />
+      <workItem from="1764044623611" duration="14026000" />
+      <workItem from="1764082724470" duration="822000" />
     </task>
     <servers />
   </component>

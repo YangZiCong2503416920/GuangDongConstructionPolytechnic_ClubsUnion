@@ -3,38 +3,174 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>广东建设职业技术学院社团融合门户 - 关于我们</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>关于我们 - 广东建设职业技术学院社团门户</title>
+  <!-- 基础样式 -->
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/pages/about.css">
+  <!-- 组件样式 -->
+  <link rel="stylesheet" href="./css/components/navbar.css">
+  <link rel="stylesheet" href="./css/components/form.css">
+  <!-- 3.0 预留：框架样式 -->
+  <link rel="stylesheet" href="./css/framework.css" id="framework-styles" disabled>
 </head>
-<body>
-<nav class="navbar">
-  <div class="nav-container">
-    <h1 class="nav-logo">广建院社团门户</h1>
-    <ul class="nav-menu">
-      <li><a href="index.html" class="nav-link">首页</a></li>
-      <li><a href="activities.html" class="nav-link">精选活动</a></li>
-      <li><a href="clubs.html" class="nav-link">所有社团</a></li>
-      <li><a href="about.html" class="nav-link active">关于我们</a></li>
-    </ul>
-  </div>
-</nav>
+<body data-page="about">
+<!-- 3.0 预留：框架根节点 -->
+<div id="vue-app" style="display: none;"></div>
 
-<main>
-  <section id="about" class="section-about">
-    <h2>关于我们</h2>
-    <p>广东建设职业技术学院社团融合门户是为学院学生提供社团信息、活动报名、社团交流的综合平台。</p>
-    <p>通过这个平台，学生可以：</p>
-    <ul>
-      <li>浏览学院所有学生社团信息</li>
-      <li>根据兴趣分类筛选社团</li>
-      <li>搜索感兴趣的社团</li>
-      <li>了解社团活动安排</li>
-      <li>在线报名参加社团</li>
-    </ul>
-    <p>我们的目标是为每一位学生提供一个便捷、高效的社团参与体验，丰富校园文化生活。</p>
-  </section>
-</main>
+<!-- 2.x 内容容器 -->
+<div id="app">
+  <!-- 导航栏 -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <h1 class="nav-logo">社团门户</h1>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">首页</a></li>
+        <li><a href="activities.html" class="nav-link">精选活动</a></li>
+        <li><a href="clubs.html" class="nav-link">所有社团</a></li>
+        <li><a href="profile.html" class="nav-link">个人中心</a></li>
+        <li><a href="about.html" class="nav-link active">关于我们</a></li>
+      </ul>
+      <div class="nav-auth" id="nav-auth">
+        <a href="login.html" class="nav-btn">登录</a>
+        <a href="register.html" class="nav-btn secondary">注册</a>
+      </div>
+    </div>
+  </nav>
 
-<script src="script.js"></script>
+  <!-- 主内容 -->
+  <main class="main-content">
+    <div class="about-container">
+      <section class="about-hero">
+        <h1 class="about-title">关于我们</h1>
+        <p class="about-subtitle">广东建设职业技术学院社团门户</p>
+      </section>
+
+      <section class="about-content">
+        <div class="about-section">
+          <h2>我们的使命</h2>
+          <p>广东建设职业技术学院社团门户致力于为全校师生提供一个便捷、高效、丰富的社团活动参与平台。我们希望通过数字化手段，促进社团文化的繁荣发展，丰富校园生活，提升学生的综合素质和社交能力。</p>
+        </div>
+
+        <div class="about-section">
+          <h2>平台特色</h2>
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">🔍</div>
+              <h3>社团发现</h3>
+              <p>轻松浏览各类社团，找到志同道合的伙伴</p>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">📅</div>
+              <h3>活动管理</h3>
+              <p>在线报名、签到、评价，全程数字化管理</p>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">📊</div>
+              <h3>数据统计</h3>
+              <p>实时查看社团活动数据，助力科学决策</p>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🔒</div>
+              <h3>安全保障</h3>
+              <p>严格的用户认证体系，保障信息安全</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-section">
+          <h2>发展历程</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">2023年9月</div>
+              <div class="timeline-content">
+                <h4>项目启动</h4>
+                <p>广东建设职业技术学院社团门户项目正式启动</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2024年3月</div>
+              <div class="timeline-content">
+                <h4>内测上线</h4>
+                <p>完成核心功能开发，启动内测</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2024年9月</div>
+              <div class="timeline-content">
+                <h4>正式发布</h4>
+                <p>面向全校师生正式发布v1.0版本</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2025年</div>
+              <div class="timeline-content">
+                <h4>持续优化</h4>
+                <p>不断优化功能，提升用户体验</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-section">
+          <h2>联系我们</h2>
+          <div class="contact-info">
+            <div class="contact-item">
+              <strong>邮箱：</strong>
+              <a href="mailto:clubs@guangjians.edu.cn">clubs@guangjians.edu.cn</a>
+            </div>
+            <div class="contact-item">
+              <strong>电话：</strong>
+              <span>020-12345678</span>
+            </div>
+            <div class="contact-item">
+              <strong>地址：</strong>
+              <span>广东省广州市天河区天源路789号广东建设职业技术学院</span>
+            </div>
+            <div class="contact-item">
+              <strong>办公时间：</strong>
+              <span>周一至周五 9:00-17:00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-section">
+          <h2>技术支持</h2>
+          <p>本平台由广东建设职业技术学院信息技术系开发团队提供技术支持，采用现代化的前端技术栈，确保平台的稳定性和可扩展性。我们持续关注技术发展趋势，为平台的未来发展预留了充足的扩展接口。</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="about-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 广东建设职业技术学院 社团联合会. 保留所有权利.</p>
+      <div class="footer-links">
+        <a href="#">隐私政策</a>
+        <a href="#">使用条款</a>
+        <a href="#">帮助中心</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- 3.0 预留：框架入口 -->
+<script src="./js/framework.js" id="framework-js" disabled></script>
+
+<!-- 2.x 核心脚本 -->
+<script type="module">
+  // 3.0 预留：框架检测
+  if (window.useFramework) {
+    document.getElementById('vue-app').style.display = 'block';
+    document.getElementById('app').style.display = 'none';
+    document.getElementById('framework-styles').disabled = false;
+    document.getElementById('framework-js').disabled = false;
+  }
+</script>
+<script type="module" src="./js/core/auth.js"></script>
+<script type="module" src="./js/core/api.js"></script>
+<script type="module" src="./js/core/utils.js"></script>
+<script type="module" src="./js/pages/about.js"></script>
 </body>
 </html>

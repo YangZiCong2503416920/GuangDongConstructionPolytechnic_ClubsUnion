@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心 - 广东建设职业技术学院社团门户</title>
+    <!-- 基础样式 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/pages/profile.css">
+    <!-- 组件样式 -->
+    <link rel="stylesheet" href="./css/components/navbar.css">
+    <link rel="stylesheet" href="./css/components/form.css">
+    <link rel="stylesheet" href="./css/components/activity-card.css">
+    <link rel="stylesheet" href="./css/components/calendar.css">
+</head>
+<body data-page="profile">
+<div id="app">
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">社团门户</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="activities.html" class="nav-link">精选活动</a></li>
+                <li><a href="clubs.html" class="nav-link">所有社团</a></li>
+                <li><a href="profile.html" class="nav-link active">个人中心</a></li>
+                <li><a href="about.html" class="nav-link">关于我们</a></li>
+            </ul>
+            <div class="nav-auth" id="nav-auth">
+                <div class="user-menu">
+                    <div class="user-avatar" id="userAvatar">U</div>
+                    <div class="user-dropdown" id="userDropdown">
+                        <a href="profile.html" class="user-dropdown-item">个人中心</a>
+                        <a href="#" class="user-dropdown-item" id="logoutBtn">退出登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="main-content">
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="user-info-card">
+                    <div class="user-avatar-large" id="profileAvatar">U</div>
+                    <div class="user-details">
+                        <h2 class="user-name" id="userName">用户名</h2>
+                        <p class="user-id" id="userId">ID: 000000</p>
+                        <p class="user-email" id="userEmail">user@example.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <div class="profile-tabs">
+                    <button class="tab-btn active" data-tab="overview">概览</button>
+                    <button class="tab-btn" data-tab="joined">已加入社团</button>
+                    <button class="tab-btn" data-tab="activities">我的活动</button>
+                    <button class="tab-btn" data-tab="calendar">日程安排</button>
+                    <button class="tab-btn" data-tab="settings">设置</button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- 概览标签页 -->
+                    <div class="tab-pane active" id="overview">
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-number" id="joinedClubsCount">0</span>
+                                <span class="stat-label">加入社团</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number" id="participatedActivities">0</span>
+                                <span class="stat-label">参与活动</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number" id="earnedPoints">0</span>
+                                <span class="stat-label">获得积分</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number" id="badgesCount">0</span>
+                                <span class="stat-label">获得徽章</span>
+                            </div>
+                        </div>
+
+                        <div class="recent-activities">
+                            <h3>最近活动</h3>
+                            <div id="recentActivitiesList">
+                                <!-- 最近活动由JS填充 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 已加入社团标签页 -->
+                    <div class="tab-pane" id="joined">
+                        <div class="clubs-grid" id="joinedClubsList">
+                            <!-- 已加入社团由JS填充 -->
+                        </div>
+                    </div>
+
+                    <!-- 我的活动标签页 -->
+                    <div class="tab-pane" id="activities">
+                        <div class="activities-grid" id="myActivitiesList">
+                            <!-- 我的活动由JS填充 -->
+                        </div>
+                    </div>
+
+                    <!-- 日程安排标签页 -->
+                    <div class="tab-pane" id="calendar">
+                        <div class="calendar-container">
+                            <div class="calendar" id="userCalendar">
+                                <!-- 日历由JS初始化 -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 设置标签页 -->
+                    <div class="tab-pane" id="settings">
+                        <div class="settings-container">
+                            <div class="settings-header">
+                                <h3>个人信息设置</h3>
+                            </div>
+
+                            <div class="settings-form">
+                                <form id="profileSettingsForm">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label">真实姓名</label>
+                                            <input type="text" class="form-input" id="settingName" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="form-label">手机号</label>
+                                            <input type="tel" class="form-input" id="settingPhone">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label class="form-label">邮箱</label>
+                                            <input type="email" class="form-input" id="settingEmail" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="form-label">学号</label>
+                                            <input type="text" class="form-input" id="settingStudentId">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">个人简介</label>
+                                        <textarea class="form-input" id="settingBio" rows="4" placeholder="介绍一下自己吧..."></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">头像</label>
+                                        <div class="avatar-upload">
+                                            <img id="currentAvatar" src="https://via.placeholder.com/100x100/cccccc/ffffff?text=头像" alt="头像" class="avatar-preview">
+                                            <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+                                            <button type="button" class="btn-secondary" id="changeAvatarBtn">更换头像</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-actions">
+                                        <button type="submit" class="form-button">保存设置</button>
+                                        <button type="button" class="form-button secondary" id="cancelSettings">取消</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- 核心工具库 -->
+<script type="module" src="./js/core/auth.js"></script>
+<script type="module" src="./js/core/api.js"></script>
+<script type="module" src="./js/core/utils.js"></script>
+<script type="module" src="./js/pages/profile.js"></script>
+</body>
+</html>
