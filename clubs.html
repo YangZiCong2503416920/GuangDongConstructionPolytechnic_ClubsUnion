@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>广东建设职业技术学院社团融合门户 - 所有社团</title>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <nav class="navbar">
   <div class="nav-container">
     <h1 class="nav-logo">广建院社团门户</h1>
     <ul class="nav-menu">
-      <li><a href="/index.html" class="nav-link">首页</a></li>
-      <li><a href="/activities.html" class="nav-link">精选活动</a></li>
-      <li><a href="/clubs.html" class="nav-link active">所有社团</a></li>
-      <li><a href="/about.html" class="nav-link">关于我们</a></li>
+      <li><a href="index.html" class="nav-link">首页</a></li>
+      <li><a href="activities.html" class="nav-link">精选活动</a></li>
+      <li><a href="clubs.html" class="nav-link active">所有社团</a></li>
+      <li><a href="about.html" class="nav-link">关于我们</a></li>
     </ul>
   </div>
 </nav>
@@ -22,6 +22,13 @@
 <main>
   <section id="clubs" class="section-clubs">
     <h2>所有社团</h2>
+
+    <!-- 搜索框 -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="搜索社团名称..." class="search-input">
+      <button id="searchButton" class="search-btn">搜索</button>
+    </div>
+
     <div class="club-filters">
       <button class="filter-btn active" data-category="all">全部</button>
       <button class="filter-btn" data-category="academic">学术</button>
@@ -35,402 +42,706 @@
 
     <div class="club-list" id="clubList">
       <!-- 学术类社团 -->
-      <div class="club-item" data-category="academic">
+      <div class="club-item" data-category="academic" data-name="习近平新时代中国特色社会主义思想研习社">
         <h3>习近平新时代中国特色社会主义思想研习社</h3>
         <p>类别: 学术</p>
         <p>联系: ideological@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('ideological')">详情</button>
+          <button class="register-btn" onclick="registerClub('ideological')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="academic">
+      <div class="club-item" data-category="academic" data-name="数学建模协会">
         <h3>数学建模协会</h3>
         <p>类别: 学术</p>
         <p>联系: mathmodel@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('mathmodel')">详情</button>
+          <button class="register-btn" onclick="registerClub('mathmodel')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="academic">
+      <div class="club-item" data-category="academic" data-name="英语协会">
         <h3>英语协会</h3>
         <p>类别: 学术</p>
         <p>联系: english@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('english')">详情</button>
+          <button class="register-btn" onclick="registerClub('english')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="academic">
+      <div class="club-item" data-category="academic" data-name="建筑识图协会">
         <h3>建筑识图协会</h3>
         <p>类别: 学术</p>
         <p>联系: architecture@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('architecture')">详情</button>
+          <button class="register-btn" onclick="registerClub('architecture')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="academic">
+      <div class="club-item" data-category="academic" data-name="路桥施工技术与新材料应用推广协会">
         <h3>路桥施工技术与新材料应用推广协会</h3>
         <p>类别: 学术</p>
         <p>联系: construction@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('construction')">详情</button>
+          <button class="register-btn" onclick="registerClub('construction')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="academic">
+      <div class="club-item" data-category="academic" data-name="建管学社">
         <h3>建管学社</h3>
         <p>类别: 学术</p>
         <p>联系: management@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('management')">详情</button>
+          <button class="register-btn" onclick="registerClub('management')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="academic">
+      <div class="club-item" data-category="academic" data-name="测量协会">
         <h3>测量协会</h3>
         <p>类别: 学术</p>
         <p>联系: survey@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('survey')">详情</button>
+          <button class="register-btn" onclick="registerClub('survey')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="academic">
+      <div class="club-item" data-category="academic" data-name="市政工程技术推广协会">
         <h3>市政工程技术推广协会</h3>
         <p>类别: 学术</p>
         <p>联系: municipal@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('municipal')">详情</button>
+          <button class="register-btn" onclick="registerClub('municipal')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="academic">
+      <div class="club-item" data-category="academic" data-name="建筑模型协会">
         <h3>建筑模型协会</h3>
         <p>类别: 学术</p>
         <p>联系: model@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('model')">详情</button>
+          <button class="register-btn" onclick="registerClub('model')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="academic">
+      <div class="club-item" data-category="academic" data-name="BIM协会">
         <h3>BIM协会</h3>
         <p>类别: 学术</p>
         <p>联系: bim@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('bim')">详情</button>
+          <button class="register-btn" onclick="registerClub('bim')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="academic">
+      <div class="club-item" data-category="academic" data-name="智能协会">
         <h3>智能协会</h3>
         <p>类别: 学术</p>
         <p>联系: smart@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('smart')">详情</button>
+          <button class="register-btn" onclick="registerClub('smart')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="academic">
+      <div class="club-item" data-category="academic" data-name="结构模型设计协会">
         <h3>结构模型设计协会</h3>
         <p>类别: 学术</p>
         <p>联系: structure@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('structure')">详情</button>
+          <button class="register-btn" onclick="registerClub('structure')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="academic">
+      <div class="club-item" data-category="academic" data-name="筑美园林园艺协会">
         <h3>筑美园林园艺协会</h3>
         <p>类别: 学术</p>
         <p>联系: garden@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('garden')">详情</button>
+          <button class="register-btn" onclick="registerClub('garden')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="academic">
+      <div class="club-item" data-category="academic" data-name="智建工程管理协会">
         <h3>智建工程管理协会</h3>
         <p>类别: 学术</p>
         <p>联系: engineering@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('engineering')">详情</button>
+          <button class="register-btn" onclick="registerClub('engineering')">报名</button>
+        </div>
       </div>
 
       <!-- 艺术类社团 -->
-      <div class="club-item" data-category="art">
+      <div class="club-item" data-category="art" data-name="艺术团舞蹈队">
         <h3>艺术团舞蹈队</h3>
         <p>类别: 艺术</p>
         <p>联系: dance@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('dance')">详情</button>
+          <button class="register-btn" onclick="registerClub('dance')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="art">
+      <div class="club-item" data-category="art" data-name="艺术团合唱队">
         <h3>艺术团合唱队</h3>
         <p>类别: 艺术</p>
         <p>联系: choir@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('choir')">详情</button>
+          <button class="register-btn" onclick="registerClub('choir')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="art">
+      <div class="club-item" data-category="art" data-name="艺术团话剧队">
         <h3>艺术团话剧队</h3>
         <p>类别: 艺术</p>
         <p>联系: drama@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('drama')">详情</button>
+          <button class="register-btn" onclick="registerClub('drama')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="art">
+      <div class="club-item" data-category="art" data-name="韵墨阁书画协会">
         <h3>韵墨阁书画协会</h3>
         <p>类别: 艺术</p>
         <p>联系: calligraphy@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('calligraphy')">详情</button>
+          <button class="register-btn" onclick="registerClub('calligraphy')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="art">
+      <div class="club-item" data-category="art" data-name="摄影协会">
         <h3>摄影协会</h3>
         <p>类别: 艺术</p>
         <p>联系: photography@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('photography')">详情</button>
+          <button class="register-btn" onclick="registerClub('photography')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="art">
+      <div class="club-item" data-category="art" data-name="叮咚文学社">
         <h3>叮咚文学社</h3>
         <p>类别: 艺术</p>
         <p>联系: literature@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('literature')">详情</button>
+          <button class="register-btn" onclick="registerClub('literature')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="art">
+      <div class="club-item" data-category="art" data-name="呦呦读书会">
         <h3>呦呦读书会</h3>
         <p>类别: 艺术</p>
         <p>联系: reading@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('reading')">详情</button>
+          <button class="register-btn" onclick="registerClub('reading')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="art">
+      <div class="club-item" data-category="art" data-name="吉他协会">
         <h3>吉他协会</h3>
         <p>类别: 艺术</p>
         <p>联系: guitar@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('guitar')">详情</button>
+          <button class="register-btn" onclick="registerClub('guitar')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="art">
+      <div class="club-item" data-category="art" data-name="炫乐协会">
         <h3>炫乐协会</h3>
         <p>类别: 艺术</p>
         <p>联系: music@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('music')">详情</button>
+          <button class="register-btn" onclick="registerClub('music')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="art">
+      <div class="club-item" data-category="art" data-name="青春微影社">
         <h3>青春微影社</h3>
         <p>类别: 艺术</p>
         <p>联系: video@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('video')">详情</button>
+          <button class="register-btn" onclick="registerClub('video')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="art">
+      <div class="club-item" data-category="art" data-name="飞扬风采排舞啦啦操协会">
         <h3>飞扬风采排舞啦啦操协会</h3>
         <p>类别: 艺术</p>
         <p>联系: cheer@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('cheer')">详情</button>
+          <button class="register-btn" onclick="registerClub('cheer')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="art">
+      <div class="club-item" data-category="art" data-name="枫之舞协会">
         <h3>枫之舞协会</h3>
         <p>类别: 艺术</p>
         <p>联系: maple@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('maple')">详情</button>
+          <button class="register-btn" onclick="registerClub('maple')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="art">
+      <div class="club-item" data-category="art" data-name="健美操协会">
         <h3>健美操协会</h3>
         <p>类别: 艺术</p>
         <p>联系: aerobics@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('aerobics')">详情</button>
+          <button class="register-btn" onclick="registerClub('aerobics')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="art">
+      <div class="club-item" data-category="art" data-name="GD漫漫动漫协会">
         <h3>GD漫漫动漫协会</h3>
         <p>类别: 艺术</p>
         <p>联系: anime@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('anime')">详情</button>
+          <button class="register-btn" onclick="registerClub('anime')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="art">
+      <div class="club-item" data-category="art" data-name="岭南文创协会">
         <h3>岭南文创协会</h3>
         <p>类别: 艺术</p>
         <p>联系: culture@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('culture')">详情</button>
+          <button class="register-btn" onclick="registerClub('culture')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="art">
+      <div class="club-item" data-category="art" data-name="华襟汉服社">
         <h3>华襟汉服社</h3>
         <p>类别: 艺术</p>
         <p>联系: hanfu@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('hanfu')">详情</button>
+          <button class="register-btn" onclick="registerClub('hanfu')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="art">
+      <div class="club-item" data-category="art" data-name="花漾压花协会">
         <h3>花漾压花协会</h3>
         <p>类别: 艺术</p>
         <p>联系: pressed@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('pressed')">详情</button>
+          <button class="register-btn" onclick="registerClub('pressed')">报名</button>
+        </div>
       </div>
 
       <!-- 体育类社团 -->
-      <div class="club-item" data-category="sports">
+      <div class="club-item" data-category="sports" data-name="篮球协会">
         <h3>篮球协会</h3>
         <p>类别: 体育</p>
         <p>联系: basketball@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('basketball')">详情</button>
+          <button class="register-btn" onclick="registerClub('basketball')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="sports">
+      <div class="club-item" data-category="sports" data-name="足球协会">
         <h3>足球协会</h3>
         <p>类别: 体育</p>
         <p>联系: football@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('football')">详情</button>
+          <button class="register-btn" onclick="registerClub('football')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="sports">
+      <div class="club-item" data-category="sports" data-name="羽毛球协会">
         <h3>羽毛球协会</h3>
         <p>类别: 体育</p>
         <p>联系: badminton@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('badminton')">详情</button>
+          <button class="register-btn" onclick="registerClub('badminton')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="sports">
+      <div class="club-item" data-category="sports" data-name="乒乓球协会">
         <h3>乒乓球协会</h3>
         <p>类别: 体育</p>
         <p>联系: tabletennis@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('tabletennis')">详情</button>
+          <button class="register-btn" onclick="registerClub('tabletennis')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="sports">
+      <div class="club-item" data-category="sports" data-name="排球协会">
         <h3>排球协会</h3>
         <p>类别: 体育</p>
         <p>联系: volleyball@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('volleyball')">详情</button>
+          <button class="register-btn" onclick="registerClub('volleyball')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="sports">
+      <div class="club-item" data-category="sports" data-name="网球协会">
         <h3>网球协会</h3>
         <p>类别: 体育</p>
         <p>联系: tennis@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('tennis')">详情</button>
+          <button class="register-btn" onclick="registerClub('tennis')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="sports">
+      <div class="club-item" data-category="sports" data-name="毽球协会">
         <h3>毽球协会</h3>
         <p>类别: 体育</p>
         <p>联系: shuttlecock@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('shuttlecock')">详情</button>
+          <button class="register-btn" onclick="registerClub('shuttlecock')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="sports">
+      <div class="club-item" data-category="sports" data-name="飞镖协会">
         <h3>飞镖协会</h3>
         <p>类别: 体育</p>
         <p>联系: darts@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('darts')">详情</button>
+          <button class="register-btn" onclick="registerClub('darts')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="sports">
+      <div class="club-item" data-category="sports" data-name="跆拳道协会">
         <h3>跆拳道协会</h3>
         <p>类别: 体育</p>
         <p>联系: taekwondo@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('taekwondo')">详情</button>
+          <button class="register-btn" onclick="registerClub('taekwondo')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="sports">
+      <div class="club-item" data-category="sports" data-name="武术协会">
         <h3>武术协会</h3>
         <p>类别: 体育</p>
         <p>联系: martialarts@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('martialarts')">详情</button>
+          <button class="register-btn" onclick="registerClub('martialarts')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="sports">
+      <div class="club-item" data-category="sports" data-name="定向越野协会">
         <h3>定向越野协会</h3>
         <p>类别: 体育</p>
         <p>联系: orienteering@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('orienteering')">详情</button>
+          <button class="register-btn" onclick="registerClub('orienteering')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="sports">
+      <div class="club-item" data-category="sports" data-name="田径爱好者协会">
         <h3>田径爱好者协会</h3>
         <p>类别: 体育</p>
         <p>联系: athletics@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('athletics')">详情</button>
+          <button class="register-btn" onclick="registerClub('athletics')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="sports">
+      <div class="club-item" data-category="sports" data-name="自行车协会">
         <h3>自行车协会</h3>
         <p>类别: 体育</p>
         <p>联系: cycling@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('cycling')">详情</button>
+          <button class="register-btn" onclick="registerClub('cycling')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="sports">
+      <div class="club-item" data-category="sports" data-name="滑板轮滑协会">
         <h3>滑板轮滑协会</h3>
         <p>类别: 体育</p>
         <p>联系: skate@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('skate')">详情</button>
+          <button class="register-btn" onclick="registerClub('skate')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="sports">
+      <div class="club-item" data-category="sports" data-name="健身健美协会">
         <h3>健身健美协会</h3>
         <p>类别: 体育</p>
         <p>联系: fitness@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('fitness')">详情</button>
+          <button class="register-btn" onclick="registerClub('fitness')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="sports">
+      <div class="club-item" data-category="sports" data-name="艺术团龙狮队">
         <h3>艺术团龙狮队</h3>
         <p>类别: 体育</p>
         <p>联系: dragonlion@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('dragonlion')">详情</button>
+          <button class="register-btn" onclick="registerClub('dragonlion')">报名</button>
+        </div>
       </div>
 
       <!-- 公益服务类社团 -->
-      <div class="club-item" data-category="public-service">
+      <div class="club-item" data-category="public-service" data-name="校青协">
         <h3>校青协</h3>
         <p>类别: 公益服务</p>
         <p>联系: volunteer@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('volunteer')">详情</button>
+          <button class="register-btn" onclick="registerClub('volunteer')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="public-service">
+      <div class="club-item" data-category="public-service" data-name="学生膳食委员会">
         <h3>学生膳食委员会</h3>
         <p>类别: 公益服务</p>
         <p>联系: dining@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('dining')">详情</button>
+          <button class="register-btn" onclick="registerClub('dining')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="public-service">
+      <div class="club-item" data-category="public-service" data-name="绿科环保协会">
         <h3>绿科环保协会</h3>
         <p>类别: 公益服务</p>
         <p>联系: environment@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('environment')">详情</button>
+          <button class="register-btn" onclick="registerClub('environment')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="public-service">
+      <div class="club-item" data-category="public-service" data-name="晨曦心理互助协会">
         <h3>晨曦心理互助协会</h3>
         <p>类别: 公益服务</p>
         <p>联系: psychology@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('psychology')">详情</button>
+          <button class="register-btn" onclick="registerClub('psychology')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="public-service">
+      <div class="club-item" data-category="public-service" data-name="校学生资助服务中心">
         <h3>校学生资助服务中心</h3>
         <p>类别: 公益服务</p>
         <p>联系: aid@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('aid')">详情</button>
+          <button class="register-btn" onclick="registerClub('aid')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="public-service">
+      <div class="club-item" data-category="public-service" data-name="校史馆志愿讲解员">
         <h3>校史馆志愿讲解员</h3>
         <p>类别: 公益服务</p>
         <p>联系: history@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('history')">详情</button>
+          <button class="register-btn" onclick="registerClub('history')">报名</button>
+        </div>
       </div>
 
       <!-- 文化类社团 -->
-      <div class="club-item" data-category="culture">
+      <div class="club-item" data-category="culture" data-name="演讲与口才协会">
         <h3>演讲与口才协会</h3>
         <p>类别: 文化</p>
         <p>联系: eloquence@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('eloquence')">详情</button>
+          <button class="register-btn" onclick="registerClub('eloquence')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="culture">
+      <div class="club-item" data-category="culture" data-name="馨声广播站">
         <h3>馨声广播站</h3>
         <p>类别: 文化</p>
         <p>联系: radio@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('radio')">详情</button>
+          <button class="register-btn" onclick="registerClub('radio')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="culture">
+      <div class="club-item" data-category="culture" data-name="礼仪文化社">
         <h3>礼仪文化社</h3>
         <p>类别: 文化</p>
         <p>联系: etiquette@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('etiquette')">详情</button>
+          <button class="register-btn" onclick="registerClub('etiquette')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="culture">
+      <div class="club-item" data-category="culture" data-name="英歌舞协会">
         <h3>英歌舞协会</h3>
         <p>类别: 文化</p>
         <p>联系: yangge@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('yangge')">详情</button>
+          <button class="register-btn" onclick="registerClub('yangge')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="culture">
+      <div class="club-item" data-category="culture" data-name="薪火相传社">
         <h3>薪火相传社</h3>
         <p>类别: 文化</p>
         <p>联系: tradition@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('tradition')">详情</button>
+          <button class="register-btn" onclick="registerClub('tradition')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="culture">
+      <div class="club-item" data-category="culture" data-name="国旗护卫队">
         <h3>国旗护卫队</h3>
         <p>类别: 文化</p>
         <p>联系: flag@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('flag')">详情</button>
+          <button class="register-btn" onclick="registerClub('flag')">报名</button>
+        </div>
       </div>
 
       <!-- 技术类社团 -->
-      <div class="club-item" data-category="technology">
+      <div class="club-item" data-category="technology" data-name="计算机协会">
         <h3>计算机协会</h3>
         <p>类别: 技术</p>
         <p>联系: computer@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('computer')">详情</button>
+          <button class="register-btn" onclick="registerClub('computer')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="technology">
+      <div class="club-item" data-category="technology" data-name="人工智能技术应用协会">
         <h3>人工智能技术应用协会</h3>
         <p>类别: 技术</p>
         <p>联系: ai@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('ai')">详情</button>
+          <button class="register-btn" onclick="registerClub('ai')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="technology">
+      <div class="club-item" data-category="technology" data-name="无人机协会">
         <h3>无人机协会</h3>
         <p>类别: 技术</p>
         <p>联系: drone@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('drone')">详情</button>
+          <button class="register-btn" onclick="registerClub('drone')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="technology">
+      <div class="club-item" data-category="technology" data-name="电子科技协会">
         <h3>电子科技协会</h3>
         <p>类别: 技术</p>
         <p>联系: electronics@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('electronics')">详情</button>
+          <button class="register-btn" onclick="registerClub('electronics')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="technology">
+      <div class="club-item" data-category="technology" data-name="启程工作室">
         <h3>启程工作室</h3>
         <p>类别: 技术</p>
         <p>联系: studio@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('studio')">详情</button>
+          <button class="register-btn" onclick="registerClub('studio')">报名</button>
+        </div>
       </div>
 
       <!-- 其他类社团 -->
-      <div class="club-item" data-category="other">
+      <div class="club-item" data-category="other" data-name="创新创业就业协会">
         <h3>创新创业就业协会</h3>
         <p>类别: 其他</p>
         <p>联系: innovation@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('innovation')">详情</button>
+          <button class="register-btn" onclick="registerClub('innovation')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="other">
+      <div class="club-item" data-category="other" data-name="卫生健康协会">
         <h3>卫生健康协会</h3>
         <p>类别: 其他</p>
         <p>联系: health@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('health')">详情</button>
+          <button class="register-btn" onclick="registerClub('health')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="other">
+      <div class="club-item" data-category="other" data-name="军事爱好者协会">
         <h3>军事爱好者协会</h3>
         <p>类别: 其他</p>
         <p>联系: military@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('military')">详情</button>
+          <button class="register-btn" onclick="registerClub('military')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="other">
+      <div class="club-item" data-category="other" data-name="红艺利剑协会">
         <h3>红艺利剑协会</h3>
         <p>类别: 其他</p>
         <p>联系: red@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('red')">详情</button>
+          <button class="register-btn" onclick="registerClub('red')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="other">
+      <div class="club-item" data-category="other" data-name="一起玩手工协会">
         <h3>一起玩手工协会</h3>
         <p>类别: 其他</p>
         <p>联系: craft@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('craft')">详情</button>
+          <button class="register-btn" onclick="registerClub('craft')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="other">
+      <div class="club-item" data-category="other" data-name="棋友协会">
         <h3>棋友协会</h3>
         <p>类别: 其他</p>
         <p>联系: chess@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('chess')">详情</button>
+          <button class="register-btn" onclick="registerClub('chess')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="other">
+      <div class="club-item" data-category="other" data-name="枫尚协会">
         <h3>枫尚协会</h3>
         <p>类别: 其他</p>
         <p>联系: fashion@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('fashion')">详情</button>
+          <button class="register-btn" onclick="registerClub('fashion')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="other">
+      <div class="club-item" data-category="other" data-name="校团委">
         <h3>校团委</h3>
         <p>类别: 其他</p>
         <p>联系: youth@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('youth')">详情</button>
+          <button class="register-btn" onclick="registerClub('youth')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="other">
+      <div class="club-item" data-category="other" data-name="校学生会">
         <h3>校学生会</h3>
         <p>类别: 其他</p>
         <p>联系: student@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('student')">详情</button>
+          <button class="register-btn" onclick="registerClub('student')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="other">
+      <div class="club-item" data-category="other" data-name="全媒体中心">
         <h3>全媒体中心</h3>
         <p>类别: 其他</p>
         <p>联系: media@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('media')">详情</button>
+          <button class="register-btn" onclick="registerClub('media')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="other">
+      <div class="club-item" data-category="other" data-name="校易班工作站">
         <h3>校易班工作站</h3>
         <p>类别: 其他</p>
         <p>联系: yiban@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('yiban')">详情</button>
+          <button class="register-btn" onclick="registerClub('yiban')">报名</button>
+        </div>
       </div>
-      <div class="club-item" data-category="other">
+      <div class="club-item" data-category="other" data-name="安全意识研习社">
         <h3>安全意识研习社</h3>
         <p>类别: 其他</p>
         <p>联系: safety@club.com</p>
+        <div class="club-actions">
+          <button class="detail-btn" onclick="showClubDetails('safety')">详情</button>
+          <button class="register-btn" onclick="registerClub('safety')">报名</button>
+        </div>
       </div>
     </div>
   </section>
 </main>
 
-<script src="/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

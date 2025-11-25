@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         quickLinksContainer.innerHTML = ''; // 清空默认内容
         activitiesData.forEach(activity => {
             const linkItem = document.createElement('li');
-            linkItem.innerHTML = `<a href="/activities.html">${activity.name}</a>`;
+            linkItem.innerHTML = `<a href="activities.html">${activity.name}</a>`;
             quickLinksContainer.appendChild(linkItem);
         });
     }
@@ -78,9 +78,70 @@ document.addEventListener('DOMContentLoaded', function() {
                         item.style.display = 'none';
                     }
                 });
+
+                // 重新应用搜索过滤
+                applySearchFilter();
             });
         });
     }
+
+    // 搜索功能
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+
+    function applySearchFilter() {
+        if (!searchInput) return;
+
+        const searchTerm = searchInput.value.toLowerCase().trim();
+
+        clubItems = document.querySelectorAll('.club-item');
+
+        clubItems.forEach(item => {
+            const clubName = item.getAttribute('data-name').toLowerCase();
+            const category = item.getAttribute('data-category');
+
+            const isActiveFilter = document.querySelector('.filter-btn.active').getAttribute('data-category');
+
+            // 检查是否符合当前分类筛选
+            const matchesCategory = isActiveFilter === 'all' || category === isActiveFilter;
+
+            // 检查是否符合搜索条件
+            const matchesSearch = searchTerm === '' || clubName.includes(searchTerm);
+
+            if (matchesCategory && matchesSearch) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener('input', applySearchFilter);
+    }
+
+    if (searchButton) {
+        searchButton.addEventListener('click', applySearchFilter);
+    }
+
+    // 社团详情查看功能
+    window.showClubDetails = function(clubId) {
+        alert(`社团详情 - ID: ${clubId}\n\n此功能将在后续版本中实现详细社团信息展示。`);
+        console.log('查看社团详情:', clubId);
+    };
+
+    // 社团报名功能
+    window.registerClub = function(clubId) {
+        // 获取社团名称
+        const clubElement = document.querySelector(`[onclick*="registerClub('${clubId}')"]`).closest('.club-item');
+        const clubName = clubElement.querySelector('h3').textContent;
+
+        // 简单的报名确认
+        if (confirm(`您确定要报名参加 "${clubName}" 吗？`)) {
+            alert(`报名成功！您已报名参加 "${clubName}"。`);
+            console.log('报名社团:', clubId);
+        }
+    };
 
     // 搜索功能预留接口
     function searchClubs(keyword) {
@@ -94,18 +155,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // 预留添加新社团的接口
         // clubData: {name, category, contact}
         console.log('添加新社团:', clubData);
-    }
-
-    // 社团详情查看接口预留
-    function viewClubDetails(clubId) {
-        // 预留查看社团详情的接口
-        console.log('查看社团详情:', clubId);
-    }
-
-    // 社团报名接口预留
-    function registerClub(clubId) {
-        // 预留社团报名接口
-        console.log('报名社团:', clubId);
     }
 
     // 预留API接口调用示例
