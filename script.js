@@ -36,9 +36,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // 导航链接激活状态管理
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(e) {
+            // 阻止默认行为以确保z-index正确
+            e.preventDefault();
+
+            // 移除所有链接的active类
             navLinks.forEach(l => l.classList.remove('active'));
+
+            // 为当前链接添加active类
             this.classList.add('active');
+
+            // 获取目标页面
+            const targetPage = this.getAttribute('href');
+            if (targetPage) {
+                // 延迟跳转以确保视觉效果完成
+                setTimeout(() => {
+                    window.location.href = targetPage;
+                }, 150);
+            }
         });
     });
 
@@ -48,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (window.scrollY > 50) {
             navbar.style.background = 'linear-gradient(135deg, rgba(26, 37, 47, 0.95) 0%, rgba(52, 73, 94, 0.95) 100%)';
         } else {
-            navbar.style.background = 'linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(52, 74, 94, 0.9) 100%)';
+            navbar.style.background = 'linear-gradient(135deg, rgba(26, 37, 47, 0.95) 0%, rgba(52, 73, 94, 0.95) 100%)';
         }
     });
 
@@ -110,8 +125,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p>联系: ${club.contact}</p>
                     <p class="club-description">${club.description}</p>
                     <div class="club-actions">
-                        <button class="favorite-btn" onclick="toggleFavorite('${club.id}')">
-                            <span class="heart">❤</span>
+                        <button class="favorite-btn" onclick="toggleFavorite('${club.id}', this)">
+                            <span class="heart">${isFavorite(club.id) ? '❤' : '♡'}</span>
                         </button>
                         <button class="detail-btn" onclick="showClubDetails('${club.id}')">详情</button>
                         <button class="register-btn" onclick="registerClub('${club.id}')">报名</button>
@@ -212,10 +227,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const clubDescription = item.getAttribute('data-description') || '';
             const category = item.getAttribute('data-category');
 
-            const isActiveFilter = document.querySelector('.filter-btn.active').getAttribute('data-category');
+            const isActiveFilter = document.querySelector('.filter-btn.active');
+            if (!isActiveFilter) return;
+            const categoryValue = isActiveFilter.getAttribute('data-category');
 
             // 检查是否符合当前分类筛选
-            const matchesCategory = isActiveFilter === 'all' || category === isActiveFilter;
+            const matchesCategory = categoryValue === 'all' || category === categoryValue;
 
             // 检查是否符合搜索条件 - 同时搜索名称和描述
             const matchesSearch = searchTerm === '' ||
@@ -260,21 +277,21 @@ document.addEventListener('DOMContentLoaded', function() {
             // 高亮名称中的关键词
             clubNameElement.innerHTML = nameText.replace(
                 new RegExp(`(${searchTerm})`, 'gi'),
-                '<mark class="highlight">$1</mark>'
+                '<span class="highlight">$1</span>'
             );
 
             // 高亮描述中的关键词
             if (clubDescriptionElement) {
                 clubDescriptionElement.innerHTML = descriptionText.replace(
                     new RegExp(`(${searchTerm})`, 'gi'),
-                    '<mark class="highlight">$1</mark>'
+                    '<span class="highlight">$1</span>'
                 );
             }
         }
     }
 
-    // 收藏功能
-    function toggleFavorite(clubId) {
+    // 收藏功能 - 修复：定义为全局函数，接受按钮元素作为参数
+    window.toggleFavorite = function(clubId, buttonElement) {
         let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
         const index = favorites.indexOf(clubId);
 
@@ -291,19 +308,30 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('favorites', JSON.stringify(favorites));
 
         // 更新按钮状态
-        const favoriteBtn = document.querySelector(`[data-name*="${clubId}"] .favorite-btn`);
-        if (favoriteBtn) {
-            favoriteBtn.classList.toggle('favorited');
-            const heart = favoriteBtn.querySelector('.heart');
-            heart.textContent = favoriteBtn.classList.contains('favorited') ? '❤' : '♡';
+        if (buttonElement) {
+            buttonElement.classList.toggle('favorited');
+            const heart = buttonElement.querySelector('.heart');
+            heart.textContent = buttonElement.classList.contains('favorited') ? '❤' : '♡';
         }
-    }
 
-    // 检查是否已收藏
-    function isFavorite(clubId) {
+        // 更新模态框中的收藏按钮状态
+        const modalFavoriteBtn = document.getElementById('modalFavoriteBtn');
+        if (modalFavoriteBtn) {
+            if (isFavorite(clubId)) {
+                modalFavoriteBtn.classList.add('favorited');
+                modalFavoriteBtn.innerHTML = '❤ 已收藏';
+            } else {
+                modalFavoriteBtn.classList.remove('favorited');
+                modalFavoriteBtn.innerHTML = '♡ 收藏';
+            }
+        }
+    };
+
+    // 检查是否已收藏 - 修复：定义为全局函数
+    window.isFavorite = function(clubId) {
         const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
         return favorites.includes(clubId);
-    }
+    };
 
     // 显示通知
     function showNotification(message, type) {
@@ -320,7 +348,7 @@ document.addEventListener('DOMContentLoaded', function() {
             padding: '15px 20px',
             borderRadius: '8px',
             color: 'white',
-            zIndex: '9999',
+            zIndex: '30000', // 确保通知在所有元素之上
             fontWeight: '500',
             boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
             animation: 'slideIn 0.3s ease, fadeOut 0.5s ease 2.5s forwards',
@@ -375,7 +403,7 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
-    // 社团详情查看功能
+    // 社团详情查看功能 - 修复：定义为全局函数
     window.showClubDetails = function(clubId) {
         // 从JSON数据中获取社团详情
         fetch('clubs-data.json')
@@ -404,7 +432,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // 更新收藏按钮的事件
                     if (modalFavoriteBtn) {
                         modalFavoriteBtn.onclick = function() {
-                            toggleFavorite(clubId);
+                            toggleFavorite(clubId, this);
                         };
 
                         // 更新收藏按钮状态
@@ -426,7 +454,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     };
 
-    // 社团报名功能
+    // 社团报名功能 - 修复：定义为全局函数
     window.registerClub = function(clubId) {
         // 从JSON数据中获取社团详情
         fetch('clubs-data.json')
@@ -442,7 +470,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             })
             .catch(error => {
-                console.error('获取社团详情失败:', error);
+                console.error('获取社团信息失败:', error);
                 alert('获取社团信息失败，请稍后重试');
             });
     };
@@ -490,4 +518,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 初始化时获取数据
     fetchClubData();
+
+    // 确保当前页面的导航链接被激活
+    const currentPage = window.location.pathname.split('/').pop();
+    if (currentPage === '') {
+        // 首页
+        document.querySelector('.nav-link[href="index.html"]').classList.add('active');
+    } else {
+        const activeLink = document.querySelector(`.nav-link[href="${currentPage}"]`);
+        if (activeLink) {
+            activeLink.classList.add('active');
+        }
+    }
 });
