@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摄影协会 - 广建社联</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<!-- 页头 -->
+<header>
+    <div class="container header-content">
+        <img src="../images/logo.png" alt="广建社联 Logo" class="logo">
+        <h1>广建社联</h1>
+        <p>广东建设职业技术学院社团联合门户</p>
+    </div>
+</header>
+
+<!-- 导航栏 -->
+<nav class="navbar">
+    <div class="nav-container">
+        <!-- Logo / Brand -->
+        <div class="nav-logo">
+            <a href="index.html">广建社联</a>
+        </div>
+
+        <!-- 汉堡按钮 (仅在小屏幕上显示) -->
+        <div class="nav-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- 导航链接 -->
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="../index.html" class="nav-link" id="nav-home">首页</a>
+            </li>
+            <li class="nav-item">
+                <a href="../featured-carousel.html" class="nav-link" id="nav-featured">精选社团</a>
+            </li>
+            <li class="nav-item">
+                <a href="../list.html" class="nav-link" id="nav-list">所有社团</a>
+            </li>
+            <li class="nav-item">
+                <a href="../about.html" class="nav-link" id="nav-about">关于我们</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- 主体内容 -->
+<main class="main-content">
+    <div class="container">
+    <h2>摄影协会</h2>
+
+    <div class="club-detail">
+        <img src="../images/sheying.jpg" alt="摄影协会外拍" class="club-image">
+
+        <div class="club-info">
+            <p><strong>【社团简介】</strong></p>
+            <p>用镜头记录青春，用光影讲述故事。摄影协会为热爱摄影的同学提供学习与交流平台，涵盖人像、风景、纪实、后期修图等方向。我们组织校园采风、外拍实践、摄影比赛和作品展映。</p>
+
+            <p><strong>【技能提升】</strong></p>
+            <ul>
+                <li>每月主题摄影挑战（如“光影”、“瞬间”）</li>
+                <li>PS/LR后期培训课</li>
+                <li>与校内外媒体合作供稿</li>
+            </ul>
+
+            <p><strong>【设备支持】</strong></p>
+            <p>协会配有基础摄影器材可供借用，零基础也可轻松入门。</p>
+        </div>
+    </div>
+    </div>
+</main>
+
+<!-- 页脚 -->
+<footer>
+    <div class="container footer-content">
+        <p>&copy; 2025 广建社联 | 作者：杨子聪 | 邮箱：<a href="mailto:YangZC2503416920@163.com">YangZC2503416920@163.com</a> | 地址：广东建设职业技术学院</p>
+        <p>友情链接：<a href="https://www.gdcvi.edu.cn/" target="_blank">学校官网</a> | <a href="http://yiban.gdcvi.edu.cn/" target="_blank">易班</a></p>
+    </div>
+</footer>
+
+//汉堡菜单
+<script>
+    // 汉堡菜单切换
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-menu');
+
+    mobileMenu.addEventListener('click', function () {
+        mobileMenu.classList.toggle('active');
+        navList.classList.toggle('active');
+    });
+
+    // 高亮当前页
+    document.addEventListener("DOMContentLoaded", function() {
+        const currentPageId = 'nav-featured';
+        const activeLink = document.getElementById(currentPageId);
+        if (activeLink) {
+            activeLink.classList.add('active');
+        }
+    });
+</script>
+
+</body>
+</html>

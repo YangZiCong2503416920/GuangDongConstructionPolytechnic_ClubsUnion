@@ -1,0 +1,15 @@
+# --- IDE ---
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# --- Logs / temp ---
+*.log
+npm-debug.log*
+yarn-error.log*

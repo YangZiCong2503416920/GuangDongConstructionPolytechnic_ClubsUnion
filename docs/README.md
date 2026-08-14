@@ -24,10 +24,21 @@
 project/
 ├── index.html                 # 首页
 ├── activities.html            # 活动列表页
-├── activity-detail.html       # 新增：活动详情页
-├── login.html                 # 新增：登录页（设备ID自动登录）
-├── profile.html               # 新增：个人中心
-├── about.html
+├── activity-detail.html       # 活动详情页
+├── clubs.html                 # 社团列表页
+├── login.html                 # 登录页（设备ID自动登录）
+├── Register.html              # 注册页
+├── Forgot-password.html       # 忘记密码页
+├── profile.html               # 个人中心
+├── about.html                 # 关于页
+│
+├── prototype/                 # v1.0 原型版（独立子站点）
+│   ├── index.html             # 原型首页
+│   ├── list.html              # 社团列表页
+│   ├── featured-carousel.html # 精选社团轮播页
+│   ├── featured/              # 各社团专题页
+│   ├── css/  images/  media/
+│   └── README.md              # 原型说明
 │
 ├── css/
 │   ├── base.css               # 重置 + 全局变量
@@ -37,18 +48,20 @@ project/
 │   │   ├── banner.css
 │   │   ├── activity-card.css
 │   │   ├── modal.css
-│   │   ├── calendar.css       # 新增
+│   │   ├── calendar.css
 │   │   └── form.css           # 表单统一样式
 │   └── pages/
 │       ├── home.css
 │       ├── activities.css
 │       ├── activity-detail.css
+│       ├── clubs.css
 │       ├── login.css
+│       ├── about.css
 │       └── profile.css
 │
 ├── js/
 │   ├── core/
-│   │   ├── api.js             # 【关键】模拟 API 层（v3.0 替换点）
+│   │   ├── api.js             # 模拟 API 层（v3.0 替换点）
 │   │   ├── cache.js           # 数据缓存机制
 │   │   ├── auth.js            # 用户身份管理
 │   │   └── utils.js           # 工具函数（防抖、日期格式等）
@@ -56,23 +69,22 @@ project/
 │   │   ├── home.js
 │   │   ├── activities.js      # 活动列表逻辑
 │   │   ├── activity-detail.js # 活动详情逻辑
+│   │   ├── clubs.js           # 社团列表逻辑
 │   │   ├── login.js           # 登录逻辑
 │   │   └── profile.js         # 个人中心逻辑
 │   └── main.js                # 全局初始化（路由感知）
 │
 ├── data/
 │   ├── activities.json        # 活动数据（含日期、描述、报名字段）
-│   ├── clubs.json             # 社团数据（保持不变）
-│   └── mock-responses/        # 可选：预置模拟响应
+│   └── clubs.json             # 社团数据
 │
 ├── assets/
-│   ├── images/
-│   └── icons/
+│   └── images/                # banner 等图片资源
 │
 └── docs/
-    └── api-spec-v3.md         # 【新增】v3.0 API 接口文档草案
-    └──CHANGELOG.md
-    └──README.md
+    ├── README.md              # 本文档
+    ├── CHANGELOG.md           # 版本变更记录
+    └── api-spec-v3.md         # v3.0 API 接口文档草案
 
 ```
 

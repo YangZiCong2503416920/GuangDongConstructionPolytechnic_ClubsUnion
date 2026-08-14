@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>叮咚文学社 & 呦呦读书会 - 广建社联</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<!-- 页头 -->
+<header>
+  <div class="container header-content">
+    <img src="../images/logo.png" alt="广建社联 Logo" class="logo">
+    <h1>广建社联</h1>
+    <p>广东建设职业技术学院社团联合门户</p>
+  </div>
+</header>
+
+<!-- 导航栏 -->
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- Logo / Brand -->
+    <div class="nav-logo">
+      <a href="index.html">广建社联</a>
+    </div>
+
+    <!-- 汉堡按钮 (仅在小屏幕上显示) -->
+    <div class="nav-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <!-- 导航链接 -->
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="../index.html" class="nav-link" id="nav-home">首页</a>
+      </li>
+      <li class="nav-item">
+        <a href="../featured-carousel.html" class="nav-link" id="nav-featured">精选社团</a>
+      </li>
+      <li class="nav-item">
+        <a href="../list.html" class="nav-link" id="nav-list">所有社团</a>
+      </li>
+      <li class="nav-item">
+        <a href="../about.html" class="nav-link" id="nav-about">关于我们</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- 主体内容 -->
+<main class="main-content">
+  <div class="container">
+  <h2>叮咚文学社 & 呦呦读书会</h2>
+
+  <div class="club-detail">
+    <img src="../images/renwen.jpg" alt="文学社读书会" class="club-image">
+
+    <div class="club-info">
+      <p><strong>【社团简介】</strong></p>
+      <p>在这里，文字是有温度的。我们组织诗歌朗诵会、读书沙龙、写作工坊、校园征文比赛，鼓励原创表达，分享阅读感悟，打造人文精神家园。</p>
+
+      <p><strong>【品牌活动】</strong></p>
+      <ul>
+        <li>每月共读一本书</li>
+        <li>“叮咚诗会”现场创作</li>
+        <li>校刊《青藤》征稿与编辑</li>
+      </ul>
+
+      <p><strong>【投稿信箱】</strong></p>
+      <p>欢迎将你的散文、诗歌、小说投稿至：<a href="mailto:literature@gdcvi.edu.cn">literature@gdcvi.edu.cn</a></p>
+    </div>
+  </div>
+  </div>
+</main>
+
+<!-- 页脚 -->
+<footer>
+  <div class="container footer-content">
+    <p>&copy; 2025 广建社联 | 作者：杨子聪 | 邮箱：<a href="mailto:YangZC2503416920@163.com">YangZC2503416920@163.com</a> | 地址：广东建设职业技术学院</p>
+    <p>友情链接：<a href="https://www.gdcvi.edu.cn/" target="_blank">学校官网</a> | <a href="http://yiban.gdcvi.edu.cn/" target="_blank">易班</a></p>
+  </div>
+</footer>
+
+//汉堡菜单
+<script>
+  // 汉堡菜单切换
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navList = document.querySelector('.nav-menu');
+
+  mobileMenu.addEventListener('click', function () {
+    mobileMenu.classList.toggle('active');
+    navList.classList.toggle('active');
+  });
+
+  // 高亮当前页
+  document.addEventListener("DOMContentLoaded", function() {
+    const currentPageId = 'nav-featured';
+    const activeLink = document.getElementById(currentPageId);
+    if (activeLink) {
+      activeLink.classList.add('active');
+    }
+  });
+</script>
+
+</body>
+</html>
