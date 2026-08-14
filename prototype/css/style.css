@@ -904,3 +904,165 @@ footer {
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
 }
+
+/* ===== 筛选栏 ===== */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 auto 30px;
+    padding: 16px 20px;
+    background: #f5f7fa;
+    border-radius: 12px;
+    max-width: 900px;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-btn {
+    padding: 8px 18px;
+    border: 1px solid #d0d7e2;
+    border-radius: 20px;
+    background: #fff;
+    color: #555;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+.filter-btn.active {
+    background: #3498db;
+    border-color: #3498db;
+    color: #fff;
+}
+
+.filter-search {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+    padding: 8px 14px;
+    border: 1px solid #d0d7e2;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.25s ease;
+}
+
+.filter-search:focus {
+    border-color: #3498db;
+}
+
+/* ===== 社团详情模态框 ===== */
+.club-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 20px;
+}
+
+.club-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.club-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transform: translateY(24px);
+    transition: transform 0.3s ease;
+}
+
+.club-modal.show .club-modal-content {
+    transform: translateY(0);
+}
+
+.club-modal-content img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 14px 14px 0 0;
+    display: block;
+}
+
+.club-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.club-modal-close:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.club-modal-body {
+    padding: 20px 24px 28px;
+}
+
+.club-modal-body h3 {
+    margin: 0 0 8px;
+    font-size: 22px;
+    color: #222;
+}
+
+.club-modal-tag {
+    display: inline-block;
+    margin: 0 0 12px;
+    padding: 3px 12px;
+    border-radius: 12px;
+    background: #eaf4fd;
+    color: #2c7bc9;
+    font-size: 13px;
+}
+
+.club-modal-desc {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+}
+
+
+
+/* --- 暂停/播放按钮（左下角） --- */
+.carousel-control.play-pause {
+    top: auto;
+    bottom: 15px;
+    left: 15px;
+    font-size: 16px;
+    padding: 8px 12px;
+}
+

@@ -9,7 +9,7 @@
     "phone": null,
     "memberCount": 85,
     "activities": ["理论学习会", "红色研学实践", "主题征文比赛"],
-    "logo": "https://via.placeholder.com/100x100/2c3e50/ffffff?text=思政",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%232c3e50%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%80%9D%E6%94%BF%3C/text%3E%3C/svg%3E",
     "founded": "2019-09-01",
     "status": "active"
   },
@@ -23,7 +23,7 @@
     "phone": "13800138101",
     "memberCount": 120,
     "activities": ["校内建模赛", "国赛培训营", "算法讲座"],
-    "logo": "https://via.placeholder.com/100x100/3498db/ffffff?text=数学建模",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%233498db%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%3C/text%3E%3C/svg%3E",
     "founded": "2017-10-15",
     "status": "active"
   },
@@ -37,7 +37,7 @@
     "phone": "13800138102",
     "memberCount": 150,
     "activities": ["每周英语角", "校园演讲赛", "跨文化交流日"],
-    "logo": "https://via.placeholder.com/100x100/e74c3c/ffffff?text=English",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e74c3c%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3EEnglish%3C/text%3E%3C/svg%3E",
     "founded": "2016-09-10",
     "status": "active"
   },
@@ -51,7 +51,7 @@
     "phone": null,
     "memberCount": 90,
     "activities": ["识图实训", "模型制作工作坊", "企业参观"],
-    "logo": "https://via.placeholder.com/100x100/f39c12/ffffff?text=建筑识图",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23f39c12%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E5%BB%BA%E7%AD%91%E8%AF%86%E5%9B%BE%3C/text%3E%3C/svg%3E",
     "founded": "2020-03-01",
     "status": "active"
   },
@@ -65,7 +65,7 @@
     "phone": "13800138103",
     "memberCount": 70,
     "activities": ["新材料讲座", "工地实训", "技术研讨会"],
-    "logo": "https://via.placeholder.com/100x100/27ae60/ffffff?text=路桥",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%2327ae60%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E8%B7%AF%E6%A1%A5%3C/text%3E%3C/svg%3E",
     "founded": "2021-04-01",
     "status": "active"
   },
@@ -79,7 +79,7 @@
     "phone": null,
     "memberCount": 80,
     "activities": ["BIM项目实战", "工程案例分析", "企业导师课"],
-    "logo": "https://via.placeholder.com/100x100/8e44ad/ffffff?text=建管",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%238e44ad%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E5%BB%BA%E7%AE%A1%3C/text%3E%3C/svg%3E",
     "founded": "2019-11-01",
     "status": "active"
   },
@@ -93,7 +93,7 @@
     "phone": "13800138104",
     "memberCount": 65,
     "activities": ["野外测绘实训", "仪器操作赛", "地形图绘制"],
-    "logo": "https://via.placeholder.com/100x100/1abc9c/ffffff?text=测量",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%231abc9c%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%B5%8B%E9%87%8F%3C/text%3E%3C/svg%3E",
     "founded": "2018-09-01",
     "status": "active"
   },
@@ -107,7 +107,7 @@
     "phone": null,
     "memberCount": 60,
     "activities": ["市政工程讲座", "管网设计实训", "城市更新调研"],
-    "logo": "https://via.placeholder.com/100x100/d35400/ffffff?text=市政",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23d35400%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E5%B8%82%E6%94%BF%3C/text%3E%3C/svg%3E",
     "founded": "2020-10-01",
     "status": "active"
   },
@@ -121,7 +121,7 @@
     "phone": "13800138105",
     "memberCount": 75,
     "activities": ["模型制作赛", "3D打印体验", "建筑设计展"],
-    "logo": "https://via.placeholder.com/100x100/2980b9/ffffff?text=模型",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%232980b9%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%A8%A1%E5%9E%8B%3C/text%3E%3C/svg%3E",
     "founded": "2019-05-01",
     "status": "active"
   },
@@ -135,7 +135,7 @@
     "phone": "13800138106",
     "memberCount": 110,
     "activities": ["BIM软件培训", "协同设计项目", "全国BIM大赛"],
-    "logo": "https://via.placeholder.com/100x100/c0392b/ffffff?text=BIM",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23c0392b%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3EBIM%3C/text%3E%3C/svg%3E",
     "founded": "2018-10-01",
     "status": "active"
   },
@@ -149,7 +149,7 @@
     "phone": null,
     "memberCount": 95,
     "activities": ["智能家居开发", "AI应用工作坊", "智慧校园项目"],
-    "logo": "https://via.placeholder.com/100x100/7f8c8d/ffffff?text=智能",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%237f8c8d%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%99%BA%E8%83%BD%3C/text%3E%3C/svg%3E",
     "founded": "2021-09-01",
     "status": "active"
   },
@@ -163,7 +163,7 @@
     "phone": "13800138107",
     "memberCount": 70,
     "activities": ["结构设计竞赛", "抗震模型测试", "桥梁承重挑战"],
-    "logo": "https://via.placeholder.com/100x100/9b59b6/ffffff?text=结构",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%239b59b6%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E7%BB%93%E6%9E%84%3C/text%3E%3C/svg%3E",
     "founded": "2020-02-01",
     "status": "active"
   },
@@ -177,7 +177,7 @@
     "phone": null,
     "memberCount": 60,
     "activities": ["校园绿化行动", "盆栽DIY", "园林设计展"],
-    "logo": "https://via.placeholder.com/100x100/2ecc71/ffffff?text=园林",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%232ecc71%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E5%9B%AD%E6%9E%97%3C/text%3E%3C/svg%3E",
     "founded": "2019-04-01",
     "status": "active"
   },
@@ -191,7 +191,7 @@
     "phone": "13800138108",
     "memberCount": 85,
     "activities": ["智慧工地模拟", "项目管理沙盘", "数字化施工研讨"],
-    "logo": "https://via.placeholder.com/100x100/f1c40f/ffffff?text=智建",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23f1c40f%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%99%BA%E5%BB%BA%3C/text%3E%3C/svg%3E",
     "founded": "2021-03-01",
     "status": "active"
   },
@@ -205,7 +205,7 @@
     "phone": "13800138201",
     "memberCount": 45,
     "activities": ["迎新晚会表演", "舞蹈比赛", "日常训练"],
-    "logo": "https://via.placeholder.com/100x100/e91e63/ffffff?text=舞蹈",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e91e63%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E8%88%9E%E8%B9%88%3C/text%3E%3C/svg%3E",
     "founded": "2015-09-01",
     "status": "active"
   },
@@ -219,7 +219,7 @@
     "phone": "13800138202",
     "memberCount": 50,
     "activities": ["校园音乐会", "合唱节参赛", "声乐训练"],
-    "logo": "https://via.placeholder.com/100x100/9c27b0/ffffff?text=合唱",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%239c27b0%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E5%90%88%E5%94%B1%3C/text%3E%3C/svg%3E",
     "founded": "2016-10-01",
     "status": "active"
   },
@@ -233,7 +233,7 @@
     "phone": null,
     "memberCount": 35,
     "activities": ["原创话剧展演", "戏剧节参赛", "即兴表演工作坊"],
-    "logo": "https://via.placeholder.com/100x100/673ab7/ffffff?text=话剧",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23673ab7%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E8%AF%9D%E5%89%A7%3C/text%3E%3C/svg%3E",
     "founded": "2017-11-01",
     "status": "active"
   },
@@ -247,7 +247,7 @@
     "phone": "13800138203",
     "memberCount": 60,
     "activities": ["书法展览", "国画教学", "传统文化节"],
-    "logo": "https://via.placeholder.com/100x100/4caf50/ffffff?text=书画",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%234caf50%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E4%B9%A6%E7%94%BB%3C/text%3E%3C/svg%3E",
     "founded": "2014-09-01",
     "status": "active"
   },
@@ -261,7 +261,7 @@
     "phone": "13800138204",
     "memberCount": 80,
     "activities": ["校园摄影赛", "外拍采风", "后期处理课"],
-    "logo": "https://via.placeholder.com/100x100/ff9800/ffffff?text=摄影",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23ff9800%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%91%84%E5%BD%B1%3C/text%3E%3C/svg%3E",
     "founded": "2016-03-01",
     "status": "active"
   },
@@ -275,7 +275,7 @@
     "phone": null,
     "memberCount": 70,
     "activities": ["诗歌朗诵会", "写作营", "校刊编辑"],
-    "logo": "https://via.placeholder.com/100x100/03a9f4/ffffff?text=文学",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%2303a9f4%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%96%87%E5%AD%A6%3C/text%3E%3C/svg%3E",
     "founded": "2015-10-01",
     "status": "active"
   },
@@ -289,7 +289,7 @@
     "phone": null,
     "memberCount": 90,
     "activities": ["共读一本书", "名家讲座", "读书分享会"],
-    "logo": "https://via.placeholder.com/100x100/009688/ffffff?text=读书",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23009688%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E8%AF%BB%E4%B9%A6%3C/text%3E%3C/svg%3E",
     "founded": "2018-04-23",
     "status": "active"
   },
@@ -303,7 +303,7 @@
     "phone": "13800138205",
     "memberCount": 65,
     "activities": ["吉他弹唱会", "指弹教学", "乐队组建"],
-    "logo": "https://via.placeholder.com/100x100/ff5722/ffffff?text=吉他",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23ff5722%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E5%90%89%E4%BB%96%3C/text%3E%3C/svg%3E",
     "founded": "2017-05-01",
     "status": "active"
   },
@@ -317,7 +317,7 @@
     "phone": null,
     "memberCount": 55,
     "activities": ["原创音乐节", "编曲工作坊", "录音棚体验"],
-    "logo": "https://via.placeholder.com/100x100/607d8b/ffffff?text=炫乐",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23607d8b%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E7%82%AB%E4%B9%90%3C/text%3E%3C/svg%3E",
     "founded": "2019-09-01",
     "status": "active"
   },
@@ -331,7 +331,7 @@
     "phone": "13800138206",
     "memberCount": 40,
     "activities": ["微电影大赛", "剪辑培训", "剧本创作营"],
-    "logo": "https://via.placeholder.com/100x100/795548/ffffff?text=微影",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23795548%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E5%BE%AE%E5%BD%B1%3C/text%3E%3C/svg%3E",
     "founded": "2020-11-01",
     "status": "active"
   },
@@ -345,7 +345,7 @@
     "phone": "13800138207",
     "memberCount": 50,
     "activities": ["啦啦操比赛", "运动会表演", "舞蹈集训"],
-    "logo": "https://via.placeholder.com/100x100/e53935/ffffff?text=啦啦操",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e53935%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E5%95%A6%E5%95%A6%E6%93%8D%3C/text%3E%3C/svg%3E",
     "founded": "2018-09-01",
     "status": "active"
   },
@@ -359,7 +359,7 @@
     "phone": null,
     "memberCount": 45,
     "activities": ["民族舞教学", "街舞battle", "舞蹈快闪"],
-    "logo": "https://via.placeholder.com/100x100/ab47bc/ffffff?text=枫舞",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23ab47bc%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%9E%AB%E8%88%9E%3C/text%3E%3C/svg%3E",
     "founded": "2019-10-01",
     "status": "active"
   },
@@ -373,7 +373,7 @@
     "phone": "13800138208",
     "memberCount": 60,
     "activities": ["健美操训练", "体能挑战赛", "健康讲座"],
-    "logo": "https://via.placeholder.com/100x100/4db6ac/ffffff?text=健美操",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%234db6ac%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E5%81%A5%E7%BE%8E%E6%93%8D%3C/text%3E%3C/svg%3E",
     "founded": "2017-03-01",
     "status": "active"
   },
@@ -387,7 +387,7 @@
     "phone": null,
     "memberCount": 100,
     "activities": ["动漫展", "cosplay聚会", "手办交流会"],
-    "logo": "https://via.placeholder.com/100x100/f44336/ffffff?text=动漫",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23f44336%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E5%8A%A8%E6%BC%AB%3C/text%3E%3C/svg%3E",
     "founded": "2016-12-01",
     "status": "active"
   },
@@ -401,7 +401,7 @@
     "phone": "13800138209",
     "memberCount": 55,
     "activities": ["广彩体验", "文创市集", "非遗工作坊"],
-    "logo": "https://via.placeholder.com/100x100/ffa726/ffffff?text=岭南",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23ffa726%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E5%B2%AD%E5%8D%97%3C/text%3E%3C/svg%3E",
     "founded": "2020-06-01",
     "status": "active"
   },
@@ -415,7 +415,7 @@
     "phone": null,
     "memberCount": 70,
     "activities": ["汉服雅集", "传统礼仪课", "节日庆典"],
-    "logo": "https://via.placeholder.com/100x100/ec407a/ffffff?text=汉服",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23ec407a%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%B1%89%E6%9C%8D%3C/text%3E%3C/svg%3E",
     "founded": "2018-08-01",
     "status": "active"
   },
@@ -429,7 +429,7 @@
     "phone": "13800138210",
     "memberCount": 40,
     "activities": ["压花手工课", "自然采集", "作品展览"],
-    "logo": "https://via.placeholder.com/100x100/8d6e63/ffffff?text=压花",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%238d6e63%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E5%8E%8B%E8%8A%B1%3C/text%3E%3C/svg%3E",
     "founded": "2021-04-01",
     "status": "active"
   },
@@ -443,7 +443,7 @@
     "phone": "13800138301",
     "memberCount": 120,
     "activities": ["院系联赛", "3v3斗牛", "球星见面会"],
-    "logo": "https://via.placeholder.com/100x100/00bcd4/ffffff?text=篮球",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%2300bcd4%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E7%AF%AE%E7%90%83%3C/text%3E%3C/svg%3E",
     "founded": "2015-09-01",
     "status": "active"
   },
@@ -457,7 +457,7 @@
     "phone": "13800138302",
     "memberCount": 110,
     "activities": ["校园杯赛", "周末友谊赛", "战术分析课"],
-    "logo": "https://via.placeholder.com/100x100/4caf50/ffffff?text=足球",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%234caf50%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E8%B6%B3%E7%90%83%3C/text%3E%3C/svg%3E",
     "founded": "2016-03-01",
     "status": "active"
   },
@@ -471,7 +471,7 @@
     "phone": "13800138303",
     "memberCount": 130,
     "activities": ["双打配对赛", "技术培训班", "校际交流赛"],
-    "logo": "https://via.placeholder.com/100x100/ffeb3b/000000?text=羽毛球",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23ffeb3b%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23000000%22%3E%E7%BE%BD%E6%AF%9B%E7%90%83%3C/text%3E%3C/svg%3E",
     "founded": "2017-09-01",
     "status": "active"
   },
@@ -485,7 +485,7 @@
     "phone": "13800138304",
     "memberCount": 95,
     "activities": ["单打淘汰赛", "发球训练营", "器材交流会"],
-    "logo": "https://via.placeholder.com/100x100/9c27b0/ffffff?text=乒乓",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%239c27b0%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E4%B9%92%E4%B9%93%3C/text%3E%3C/svg%3E",
     "founded": "2018-10-01",
     "status": "active"
   },
@@ -499,7 +499,7 @@
     "phone": null,
     "memberCount": 80,
     "activities": ["沙滩排球赛", "基础技能培训", "战术配合演练"],
-    "logo": "https://via.placeholder.com/100x100/03a9f4/ffffff?text=排球",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%2303a9f4%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%8E%92%E7%90%83%3C/text%3E%3C/svg%3E",
     "founded": "2019-05-01",
     "status": "active"
   },
@@ -513,7 +513,7 @@
     "phone": "13800138305",
     "memberCount": 60,
     "activities": ["网球公开赛", "新手入门课", "场地维护日"],
-    "logo": "https://via.placeholder.com/100x100/4caf50/ffffff?text=网球",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%234caf50%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E7%BD%91%E7%90%83%3C/text%3E%3C/svg%3E",
     "founded": "2020-09-01",
     "status": "active"
   },
@@ -527,7 +527,7 @@
     "phone": null,
     "memberCount": 45,
     "activities": ["毽球花样赛", "传统体育节", "技巧展示"],
-    "logo": "https://via.placeholder.com/100x100/ff9800/ffffff?text=毽球",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23ff9800%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%AF%BD%E7%90%83%3C/text%3E%3C/svg%3E",
     "founded": "2021-03-01",
     "status": "active"
   },
@@ -541,7 +541,7 @@
     "phone": "13800138306",
     "memberCount": 35,
     "activities": ["精准投掷赛", "飞镖规则讲解", "休闲娱乐局"],
-    "logo": "https://via.placeholder.com/100x100/795548/ffffff?text=飞镖",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23795548%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E9%A3%9E%E9%95%96%3C/text%3E%3C/svg%3E",
     "founded": "2020-11-01",
     "status": "active"
   },
@@ -555,7 +555,7 @@
     "phone": "13800138307",
     "memberCount": 70,
     "activities": ["品势训练", "实战对抗", "黑带考核"],
-    "logo": "https://via.placeholder.com/100x100/e53935/ffffff?text=跆拳道",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e53935%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E8%B7%86%E6%8B%B3%E9%81%93%3C/text%3E%3C/svg%3E",
     "founded": "2017-04-01",
     "status": "active"
   },
@@ -569,7 +569,7 @@
     "phone": null,
     "memberCount": 65,
     "activities": ["太极拳班", "器械套路", "武术表演"],
-    "logo": "https://via.placeholder.com/100x100/3f51b5/ffffff?text=武术",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%233f51b5%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%AD%A6%E6%9C%AF%3C/text%3E%3C/svg%3E",
     "founded": "2016-09-01",
     "status": "active"
   },
@@ -583,7 +583,7 @@
     "phone": "13800138308",
     "memberCount": 50,
     "activities": ["校园定向赛", "野外生存训练", "地图识读课"],
-    "logo": "https://via.placeholder.com/100x100/009688/ffffff?text=定向",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23009688%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E5%AE%9A%E5%90%91%3C/text%3E%3C/svg%3E",
     "founded": "2019-10-01",
     "status": "active"
   },
@@ -597,7 +597,7 @@
     "phone": "13800138309",
     "memberCount": 85,
     "activities": ["百米冲刺赛", "长跑训练营", "跳远挑战"],
-    "logo": "https://via.placeholder.com/100x100/f44336/ffffff?text=田径",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23f44336%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E7%94%B0%E5%BE%84%3C/text%3E%3C/svg%3E",
     "founded": "2018-03-01",
     "status": "active"
   },
@@ -611,7 +611,7 @@
     "phone": null,
     "memberCount": 90,
     "activities": ["环城骑行", "自行车保养课", "公益骑行"],
-    "logo": "https://via.placeholder.com/100x100/607d8b/ffffff?text=骑行",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23607d8b%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E9%AA%91%E8%A1%8C%3C/text%3E%3C/svg%3E",
     "founded": "2017-05-01",
     "status": "active"
   },
@@ -625,7 +625,7 @@
     "phone": "13800138310",
     "memberCount": 55,
     "activities": ["滑板技巧赛", "轮滑夜游", "安全防护课"],
-    "logo": "https://via.placeholder.com/100x100/ffc107/000000?text=滑板",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23ffc107%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23000000%22%3E%E6%BB%91%E6%9D%BF%3C/text%3E%3C/svg%3E",
     "founded": "2020-07-01",
     "status": "active"
   },
@@ -639,7 +639,7 @@
     "phone": "13800138311",
     "memberCount": 100,
     "activities": ["力量训练营", "体脂挑战赛", "营养讲座"],
-    "logo": "https://via.placeholder.com/100x100/2196f3/ffffff?text=健身",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%232196f3%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E5%81%A5%E8%BA%AB%3C/text%3E%3C/svg%3E",
     "founded": "2019-01-01",
     "status": "active"
   },
@@ -653,7 +653,7 @@
     "phone": null,
     "memberCount": 40,
     "activities": ["春节表演", "龙狮训练", "文化进社区"],
-    "logo": "https://via.placeholder.com/100x100/d32f2f/ffffff?text=龙狮",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23d32f2f%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E9%BE%99%E7%8B%AE%3C/text%3E%3C/svg%3E",
     "founded": "2015-12-01",
     "status": "active"
   },
@@ -667,7 +667,7 @@
     "phone": "13800138401",
     "memberCount": 300,
     "activities": ["支教行动", "大型赛会服务", "社区帮扶"],
-    "logo": "https://via.placeholder.com/100x100/4caf50/ffffff?text=青协",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%234caf50%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E9%9D%92%E5%8D%8F%3C/text%3E%3C/svg%3E",
     "founded": "2010-09-01",
     "status": "active"
   },
@@ -681,7 +681,7 @@
     "phone": "13800138402",
     "memberCount": 25,
     "activities": ["食堂检查", "菜品意见收集", "美食节策划"],
-    "logo": "https://via.placeholder.com/100x100/ff9800/ffffff?text=膳委",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23ff9800%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E8%86%B3%E5%A7%94%3C/text%3E%3C/svg%3E",
     "founded": "2018-09-01",
     "status": "active"
   },
@@ -695,7 +695,7 @@
     "phone": "13800138403",
     "memberCount": 120,
     "activities": ["垃圾分类宣传", "植树造林", "环保创意赛"],
-    "logo": "https://via.placeholder.com/100x100/2e7d32/ffffff?text=环保",
+    "logo": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%232e7d32%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E7%8E%AF%E4%BF%9D%3C/text%3E%3C/svg%3E",
     "founded": "2018-09-01",
     "status": "active"
   }

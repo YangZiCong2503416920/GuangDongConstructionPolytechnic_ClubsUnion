@@ -9,7 +9,7 @@ export class API {
             await new Promise(resolve => setTimeout(resolve, 500));
 
             // 从本地数据加载（v2.2.0）
-            const response = await fetch('/data/clubs.json');
+            const response = await fetch('./data/clubs.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -55,7 +55,7 @@ export class API {
             await new Promise(resolve => setTimeout(resolve, 500));
 
             // 从本地数据加载并生成模拟活动
-            const clubsResponse = await fetch('/data/clubs.json');
+            const clubsResponse = await fetch('./data/clubs.json');
             if (!clubsResponse.ok) {
                 throw new Error(`HTTP error! status: ${clubsResponse.status}`);
             }
@@ -77,7 +77,7 @@ export class API {
                         maxParticipants: 50,
                         currentParticipants: Math.floor(Math.random() * 50),
                         status: Math.random() > 0.3 ? 'upcoming' : 'ongoing',
-                        image: club.logo || 'https://via.placeholder.com/300x200/cccccc/ffffff?text=活动',
+                        image: club.logo || 'data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22200%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23cccccc%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2218%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%B4%BB%E5%8A%A8%3C/text%3E%3C/svg%3E',
                         createdAt: new Date().toISOString().split('T')[0]
                     };
                     activities.push(activity);
@@ -125,7 +125,7 @@ export class API {
     // 获取单个社团详情
     static async getClub(id) {
         try {
-            const response = await fetch('/data/clubs.json');
+            const response = await fetch('./data/clubs.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -211,4 +211,40 @@ export class API {
             return { authenticated: false };
         }
     }
+}
+
+// ---- 兼容旧版命名导出（由页面直接 import 的函数） ----
+
+// 获取活动列表
+export async function fetchActivities(params = {}) {
+    return API.getActivities(params);
+}
+
+// 获取单个活动详情（返回页面期望的字段结构）
+export async function fetchActivityById(id) {
+    const result = await API.getActivities({ limit: 1000 });
+    const activity = (result.data || []).find(a => a.id === id);
+    if (!activity) return null;
+    return {
+        ...activity,
+        date: activity.startTime,
+        poster: activity.image
+    };
+}
+
+// 报名活动（模拟，写入 localStorage）
+export async function registerForActivity(activityId, formData) {
+    await new Promise(resolve => setTimeout(resolve, 800));
+    const userId = localStorage.getItem('user_id') || 'temp_user';
+    const key = 'registrations_' + userId;
+    const registrations = JSON.parse(localStorage.getItem(key) || '[]');
+    registrations.push({
+        activityId,
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        time: new Date().toISOString()
+    });
+    localStorage.setItem(key, JSON.stringify(registrations));
+    return { success: true };
 }

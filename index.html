@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="广东建设职业技术学院社团门户首页，展示热门活动、最新社团与校园动态，支持社团浏览、活动报名与个人中心。">
+
     <title>首页 - 广东建设职业技术学院社团门户</title>
     <!-- 基础样式 -->
     <link rel="stylesheet" href="./css/base.css">
@@ -12,12 +14,8 @@
     <link rel="stylesheet" href="./css/components/navbar.css">
     <link rel="stylesheet" href="./css/components/banner.css">
     <link rel="stylesheet" href="./css/components/form.css">
-    <!-- 3.0 预留：框架样式 -->
-    <link rel="stylesheet" href="./css/framework.css" id="framework-styles" disabled>
 </head>
 <body data-page="home">
-<!-- 3.0 预留：框架根节点 -->
-<div id="vue-app" style="display: none;"></div>
 
 <!-- 2.x 内容容器 -->
 <div id="app">
@@ -34,7 +32,7 @@
             </ul>
             <div class="nav-auth" id="nav-auth">
                 <a href="login.html" class="nav-btn">登录</a>
-                <a href="register.html" class="nav-btn secondary">注册</a>
+                <a href="Register.html" class="nav-btn secondary">注册</a>
             </div>
         </div>
     </nav>
@@ -84,7 +82,6 @@
             <section class="popular-section">
                 <h2 class="popular-title">热门活动</h2>
                 <div class="popular-grid" id="popular-activities">
-                    <!-- 3.0 预留：框架渲染区域 -->
                     <div class="loading-placeholder" id="activities-loading">加载中...</div>
                 </div>
             </section>
@@ -93,7 +90,6 @@
             <section class="clubs-section">
                 <h2 class="clubs-title">最新社团</h2>
                 <div class="clubs-grid" id="latest-clubs">
-                    <!-- 3.0 预留：框架渲染区域 -->
                     <div class="loading-placeholder" id="clubs-loading">加载中...</div>
                 </div>
             </section>
@@ -159,19 +155,7 @@
     </footer>
 </div>
 
-<!-- 3.0 预留：框架入口 -->
-<script src="./js/framework.js" id="framework-js" disabled></script>
-
-<!-- 2.x 核心脚本 -->
-<script type="module">
-    // 3.0 预留：框架检测
-    if (window.useFramework) {
-        document.getElementById('vue-app').style.display = 'block';
-        document.getElementById('app').style.display = 'none';
-        document.getElementById('framework-styles').disabled = false;
-        document.getElementById('framework-js').disabled = false;
-    }
-</script>
+<!-- 核心脚本 -->
 <script type="module" src="./js/core/auth.js"></script>
 <script type="module" src="./js/core/api.js"></script>
 <script type="module" src="./js/core/utils.js"></script>

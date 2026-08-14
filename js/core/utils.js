@@ -191,3 +191,20 @@ export class Utils {
 
 // 初始化动画样式
 Utils.addAnimationStyles();
+
+// 兼容旧版命名导出：消息提示
+export function showNotification(message, type = 'info') {
+    Utils.showMessage(message, type);
+}
+
+// 兼容旧版命名导出：日期格式化
+export function formatDate(dateString) {
+    return Utils.formatDate(dateString);
+}
+
+// 兼容旧版命名导出：日期时间格式化
+export function formatDateTime(dateString) {
+    return Utils.formatDateTime(dateString);
+}
+
+

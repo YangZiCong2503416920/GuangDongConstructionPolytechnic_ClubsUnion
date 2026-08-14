@@ -1,6 +1,3 @@
-import { fetchActivities } from '../core/api.js';
-import { showNotification } from '../core/utils.js';
-
 document.addEventListener('DOMContentLoaded', async () => {
     // 初始化导航栏
     initializeNavigation();

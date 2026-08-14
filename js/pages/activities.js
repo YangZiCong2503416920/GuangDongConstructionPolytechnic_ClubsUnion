@@ -28,7 +28,7 @@ class ActivitiesPage {
     async loadActivitiesFromLocal() {
         // 模拟 API 调用，从本地 JSON 文件加载
         // 这里我们生成一些模拟活动数据，因为原数据中没有活动信息
-        const clubs = await fetch('/data/clubs.json').then(r => r.json());
+        const clubs = await fetch('./data/clubs.json').then(r => r.json());
 
         // 为每个社团生成一些模拟活动
         const activities = [];
@@ -46,7 +46,7 @@ class ActivitiesPage {
                     maxParticipants: 50,
                     currentParticipants: Math.floor(Math.random() * 50),
                     status: Math.random() > 0.3 ? 'upcoming' : 'ongoing',
-                    image: club.logo || 'https://via.placeholder.com/300x200/cccccc/ffffff?text=活动',
+                    image: club.logo || 'data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22200%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23cccccc%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2218%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%B4%BB%E5%8A%A8%3C/text%3E%3C/svg%3E',
                     createdAt: new Date().toISOString().split('T')[0]
                 };
                 activities.push(activity);
@@ -92,7 +92,7 @@ class ActivitiesPage {
         <div class="activity-image">
           <img src="${activity.image}" 
                alt="${activity.title}" 
-               onerror="this.src='https://via.placeholder.com/300x200/cccccc/ffffff?text=活动'">
+               onerror="this.src='data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22200%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23cccccc%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2218%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%B4%BB%E5%8A%A8%3C/text%3E%3C/svg%3E'">
           <div class="activity-status ${statusClass}">${statusText}</div>
         </div>
         <div class="activity-info">

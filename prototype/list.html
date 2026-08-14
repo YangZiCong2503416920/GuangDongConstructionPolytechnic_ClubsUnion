@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="广建社联全部社团列表原型，查看各社团介绍与风采。">
+
   <title>所有社团 - 广建社联</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -55,12 +57,25 @@
   <div class="container">
     <h1 style="text-align: center; margin-bottom: 30px;">广东建设职业技术学院全部社团名单</h1>
 
+    <!-- 筛选栏 -->
+    <div class="filter-bar">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="culture">文化艺术</button>
+        <button class="filter-btn" data-filter="sports">体育健身</button>
+        <button class="filter-btn" data-filter="academic">学术科技</button>
+        <button class="filter-btn" data-filter="service">服务实践</button>
+      </div>
+      <input type="text" class="filter-search" id="clubSearch" placeholder="搜索社团名称..." />
+    </div>
+
+
     <!-- 文化艺术类 -->
-    <section class="category">
+    <section class="category" data-category="culture">
       <h2>🎨 文化艺术类</h2>
       <div class="list-card-container">
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="锻炼口才与演讲能力，定期举办演讲比赛、辩论赛与主持培训。">
           <div class="card-img list-card-img">
             <img src="images/default.jpg" alt="默认logo图" class="card-img">
             </div>
@@ -68,7 +83,7 @@
             <a href="#" class="btn">了解详情</a>
           </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="吉他爱好者的交流平台，提供教学、乐队排练与校园演出机会。">
           <div class="card-img list-card-img">
             <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -76,7 +91,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="以书会友，定期举办读书分享会与好书推荐活动。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -84,7 +99,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="热爱文学创作的同学聚集地，投稿、写作交流与文学讲座。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -92,7 +107,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="立足岭南文化，开展文创设计与非遗体验活动。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -100,7 +115,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="手工制作爱好者交流平台，涵盖编织、陶艺与各类 DIY 手工。">
           <div class="card-img list-card-img">
           <img src="images/yiqiwan.jpg" alt="一起玩手工协会" class="card-img">
           </div>
@@ -108,7 +123,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="传承书画艺术，定期举办书画教学、展览与创作交流。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -116,7 +131,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="棋类爱好者的乐园，涵盖象棋、围棋、五子棋等，定期组织棋艺交流赛。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -124,7 +139,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="传承中华传统服饰文化，通过汉服展示、礼仪学习等活动弘扬优秀传统文化。">
           <div class="card-img list-card-img">
           <img src="images/huafu.jpg" alt="华襟汉服社" class="card-img">
           </div>
@@ -132,7 +147,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="用镜头记录校园生活，定期组织外拍采风与摄影技巧分享会。">
           <div class="card-img list-card-img">
           <img src="images/sheying.jpg" alt="摄影协会" class="card-img">
           </div>
@@ -140,7 +155,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="校园声音的传播者，负责日常广播、活动主持与播音培训。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -148,7 +163,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="流行音乐爱好者的聚集地，提供乐队排练、歌唱交流与舞台表演机会。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -156,7 +171,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="汇聚校园舞蹈精英，涵盖多种舞种，活跃于各大校园文艺演出。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -164,7 +179,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="合唱艺术团体，定期排练并参加校园及校外演出。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -172,7 +187,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="话剧表演爱好者团队，编演校园原创话剧与经典剧目。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -180,7 +195,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="传承舞龙舞狮传统文化，为校园活动带来精彩的传统技艺表演。">
           <div class="card-img list-card-img">
           <img src="images/longshi.jpg" alt="艺术团龙狮队" class="card-img">
           </div>
@@ -188,7 +203,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="传播礼仪文化，提供礼仪培训、接待服务与形象展示。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -196,7 +211,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="动漫二次元文化爱好者的聚集地，cosplay、动漫放映与创作交流。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -204,7 +219,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="关注心理健康，开展心理知识科普与朋辈互助活动。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -212,7 +227,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="微电影与短视频创作团队，用影像记录校园青春故事。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -220,7 +235,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="舞蹈爱好者的聚集地，涵盖现代舞、民族舞等多种舞种，活跃于各大校园舞台。">
           <div class="card-img list-card-img">
           <img src="images/fengzhiwu.jpg" alt="枫之舞协会" class="card-img">
           </div>
@@ -228,7 +243,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-culture">
+        <div class="card list-card type-culture" data-desc="排舞与啦啦操团体，为运动会和晚会带来活力四射的表演。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -240,11 +255,11 @@
     </section>
 
     <!-- 体育健身类 -->
-    <section class="category">
+    <section class="category" data-category="sports">
       <h2>⚽ 体育健身类</h2>
       <div class="list-card-container">
 
-        <div class="card list-card type-sports">
+        <div class="card list-card type-sports" data-desc="骑行爱好者团队，组织周末骑行、长途拉练与骑行安全培训。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -252,7 +267,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-sports">
+        <div class="card list-card type-sports" data-desc="滑板与轮滑爱好者的乐园，定期开展教学与趣味活动。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -260,7 +275,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-sports">
+        <div class="card list-card type-sports" data-desc="排球运动爱好者团体，组织训练、友谊赛与校内联赛。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -268,7 +283,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-sports">
+        <div class="card list-card type-sports" data-desc="足球爱好者的大家庭，组织日常训练与校园足球联赛。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -276,7 +291,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-sports">
+        <div class="card list-card type-sports" data-desc="羽毛球运动交流平台，定期组织训练、比赛与球技交流。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -284,7 +299,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-sports">
+        <div class="card list-card type-sports" data-desc="毽球传统体育项目推广，组织趣味毽球活动与比赛。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -292,7 +307,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-sports">
+        <div class="card list-card type-sports" data-desc="跆拳道训练与礼仪文化推广，强身健体、磨炼意志。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -300,7 +315,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-sports">
+        <div class="card list-card type-sports" data-desc="中华武术传承与推广，涵盖套路、散打等多种形式。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -308,7 +323,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-sports">
+        <div class="card list-card type-sports" data-desc="篮球爱好者的聚集地，组织日常训练、3v3 挑战赛与校园联赛。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -316,7 +331,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-sports">
+        <div class="card list-card type-sports" data-desc="网球运动推广，提供教学、约球与校际交流机会。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -324,7 +339,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-sports">
+        <div class="card list-card type-sports" data-desc="飞镖运动爱好者平台，定期举办飞镖竞赛与积分赛。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -332,7 +347,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-sports">
+        <div class="card list-card type-sports" data-desc="国球爱好者的乐园，组织日常切磋与校内乒乓球赛。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -340,7 +355,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-sports">
+        <div class="card list-card type-sports" data-desc="定向越野运动推广，组织校园寻宝与户外定向赛事。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -348,7 +363,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-sports">
+        <div class="card list-card type-sports" data-desc="田径运动爱好者团体，组织跑步训练与校运会备赛。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -356,7 +371,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-sports">
+        <div class="card list-card type-sports" data-desc="健美操与有氧健身推广，为校园活动带来活力表演。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -364,7 +379,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-sports">
+        <div class="card list-card type-sports" data-desc="健身与力量训练交流平台，科学训练指导与健身打卡。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -376,11 +391,11 @@
     </section>
 
     <!-- 学术科技类 -->
-    <section class="category">
+    <section class="category" data-category="academic">
       <h2>🔬 学术科技类</h2>
       <div class="list-card-container">
 
-        <div class="card list-card type-academic">
+        <div class="card list-card type-academic" data-desc="普及卫生健康知识，开展健康讲座与急救培训。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -388,7 +403,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-academic">
+        <div class="card list-card type-academic" data-desc="倡导绿色环保理念，组织环保宣传、垃圾分类与低碳公益活动。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -396,7 +411,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-academic">
+        <div class="card list-card type-academic" data-desc="聚焦路桥施工技术前沿，开展新材料应用学习与参观交流。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -404,7 +419,7 @@
           <a href="#" class="btn">了解详情</a>
           </div>
 
-        <div class="card list-card type-academic">
+        <div class="card list-card type-academic" data-desc="建设工程管理专业社团，组织专业讲座、实地考察与学科竞赛。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -412,7 +427,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-academic">
+        <div class="card list-card type-academic" data-desc="无人机技术爱好者平台，航拍、飞手培训与无人机应用探索。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -420,7 +435,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-academic">
+        <div class="card list-card type-academic" data-desc="人工智能技术学习与交流平台，AI 应用开发与科普活动。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -428,7 +443,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-academic">
+        <div class="card list-card type-academic" data-desc="计算机技术爱好者团体，编程学习、装机维护与 IT 讲座。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -436,7 +451,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-academic">
+        <div class="card list-card type-academic" data-desc="智慧建造与工程管理方向的学习实践社团。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -444,7 +459,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-academic">
+        <div class="card list-card type-academic" data-desc="市政工程技术学习与行业认知推广。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -452,7 +467,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-academic">
+        <div class="card list-card type-academic" data-desc="工程测量技术学习实践，组织仪器操作培训与测绘竞赛。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -460,7 +475,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-academic">
+        <div class="card list-card type-academic" data-desc="英语学习与数学建模双主题社团，组织演讲、竞赛与建模培训。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -468,7 +483,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-academic">
+        <div class="card list-card type-academic" data-desc="服务创新创业与就业指导，举办创业沙龙、求职培训与项目路演。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -476,7 +491,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-academic">
+        <div class="card list-card type-academic" data-desc="普及校园安全知识，组织安全演练与防诈骗宣传。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -484,7 +499,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-academic">
+        <div class="card list-card type-academic" data-desc="学生自主运营的创意实践工作室，承接校园文创与设计项目。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -495,11 +510,11 @@
     </section>
 
     <!-- 服务实践类 / 其他 -->
-    <section class="category">
+    <section class="category" data-category="service">
       <h2>🤝 服务实践类 / 其他</h2>
       <div class="list-card-container">
 
-        <div class="card list-card type-service">
+        <div class="card list-card type-service" data-desc="红色文化传承与国防教育实践社团。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -507,7 +522,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-service">
+        <div class="card list-card type-service" data-desc="传承红色基因，开展宣讲、支教等公益实践。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -515,7 +530,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-service">
+        <div class="card list-card type-service" data-desc="维护学生餐饮权益，收集反馈并参与食堂监督。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -523,7 +538,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-service">
+        <div class="card list-card type-service" data-desc="军事知识交流与国防教育社团，组织军事模型展与讲座。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -531,7 +546,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-service">
+        <div class="card list-card type-service" data-desc="易班平台运营团队，负责校园网络文化活动组织与推广。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -539,7 +554,7 @@
           <a href="#" class="btn">了解详情</a>
         </div>
 
-        <div class="card list-card type-service">
+        <div class="card list-card type-service" data-desc="负责学校国旗升降与大型活动仪仗任务，展现青春风采。">
           <div class="card-img list-card-img">
           <img src="images/default.jpg" alt="默认logo图" class="card-img">
           </div>
@@ -669,44 +684,108 @@
   }); // DOMContentLoaded end
 </script>
 
+
+<!-- 社团详情模态框 -->
+<div class="club-modal" id="clubModal" aria-hidden="true">
+  <div class="club-modal-content">
+    <button class="club-modal-close" id="clubModalClose" aria-label="关闭">&times;</button>
+    <img id="clubModalImg" src="" alt="社团图片" />
+    <div class="club-modal-body">
+      <h3 id="clubModalName"></h3>
+      <p class="club-modal-tag" id="clubModalCategory"></p>
+      <p class="club-modal-desc" id="clubModalDesc"></p>
+    </div>
+  </div>
+</div>
+
 <script>
-  // 等待 DOM 加载完成
-  document.addEventListener('DOMContentLoaded', function () {
-    // 1. 获取必要的元素
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('navMenu');
+  // ===== 社团详情模态框 =====
+  (function () {
+    var modal = document.getElementById('clubModal');
+    var closeBtn = document.getElementById('clubModalClose');
+    var modalImg = document.getElementById('clubModalImg');
+    var modalName = document.getElementById('clubModalName');
+    var modalCategory = document.getElementById('clubModalCategory');
+    var modalDesc = document.getElementById('clubModalDesc');
 
-    // 2. 添加点击事件监听器到汉堡按钮
-    hamburger.addEventListener('click', function () {
-      // 3. 切换汉堡按钮和菜单的 'active' 类
-      hamburger.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
+    var categoryNames = {
+      culture: '文化艺术类',
+      sports: '体育健身类',
+      academic: '学术科技类',
+      service: '服务实践类'
+    };
 
-    // 4. （可选）点击菜单项后自动关闭菜单
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+    // 点击"了解详情"打开模态框
+    document.querySelectorAll('.list-card .btn').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var card = btn.closest('.list-card');
+        var img = card.querySelector('img');
+        var name = card.querySelector('h3').textContent;
+        var type = (card.className.match(/type-([a-z]+)/) || [])[1] || '';
+        var desc = card.getAttribute('data-desc') || '';
+
+        modalImg.src = img ? img.src : 'images/default.jpg';
+        modalImg.alt = name;
+        modalName.textContent = name;
+        modalCategory.textContent = categoryNames[type] || '学生社团';
+        modalDesc.textContent = desc || '暂无详细介绍，敬请期待。';
+        modal.classList.add('show');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
       });
     });
 
-    // 5. （可选）点击菜单外部区域关闭菜单
-    // 注意：这个实现可能需要调整，因为点击菜单内部也会触发。
-    // 一个更健壮的方法是监听 document click，然后检查点击目标是否在菜单内。
-    document.addEventListener('click', function(event) {
-      // 如果点击的目标不是汉堡按钮也不是菜单本身，并且菜单是打开的
-      if (!hamburger.contains(event.target) &&
-              !navMenu.contains(event.target) &&
-              navMenu.classList.contains('active')) {
+    function closeModal() {
+      modal.classList.remove('show');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
 
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-      }
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  })();
+
+  // ===== 分类筛选 + 搜索 =====
+  (function () {
+    var filterButtons = document.querySelectorAll('.filter-btn');
+    var sections = document.querySelectorAll('.category');
+    var searchInput = document.getElementById('clubSearch');
+    var currentFilter = 'all';
+
+    function applyFilter() {
+      sections.forEach(function (section) {
+        var cat = section.getAttribute('data-category');
+        var show = currentFilter === 'all' || cat === currentFilter;
+        section.style.display = show ? '' : 'none';
+      });
+    }
+
+    function applySearch() {
+      var keyword = (searchInput.value || '').trim().toLowerCase();
+      document.querySelectorAll('.list-card').forEach(function (card) {
+        var name = card.querySelector('h3').textContent.toLowerCase();
+        card.style.display = (!keyword || name.indexOf(keyword) !== -1) ? '' : 'none';
+      });
+    }
+
+    filterButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        filterButtons.forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        currentFilter = btn.getAttribute('data-filter');
+        applyFilter();
+        applySearch();
+      });
     });
 
-  });
+    searchInput.addEventListener('input', applySearch);
+  })();
 </script>
 
 </body>

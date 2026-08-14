@@ -27,7 +27,7 @@ class ClubsPage {
 
     async loadClubsFromLocal() {
         // 模拟 API 调用，从本地 JSON 文件加载
-        const response = await fetch('/data/clubs.json');
+        const response = await fetch('./data/clubs.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -60,10 +60,10 @@ class ClubsPage {
     renderClubCard(club) {
         return `
       <div class="club-card" data-id="${club.id}">
-        <img src="${club.logo || 'https://via.placeholder.com/100x100/cccccc/ffffff?text=社团'}" 
+        <img src="${club.logo || 'data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23cccccc%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E7%A4%BE%E5%9B%A2%3C/text%3E%3C/svg%3E'}" 
              alt="${club.name}" 
              class="club-logo"
-             onerror="this.src='https://via.placeholder.com/100x100/cccccc/ffffff?text=社团'">
+             onerror="this.src='data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23cccccc%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E7%A4%BE%E5%9B%A2%3C/text%3E%3C/svg%3E'">
         <div class="club-info">
           <h3 class="club-name">${club.name}</h3>
           <p class="club-category">${this.getCategoryName(club.category)}</p>

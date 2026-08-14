@@ -181,7 +181,7 @@ class ProfilePage {
                 {
                     id: 'club_1',
                     name: '编程爱好者协会',
-                    logo: 'https://via.placeholder.com/100x100/667eea/ffffff?text=编程',
+                    logo: 'data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23667eea%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E7%BC%96%E7%A8%8B%3C/text%3E%3C/svg%3E',
                     category: 'technology',
                     description: '热爱编程，共同学习技术',
                     memberCount: 45,
@@ -190,7 +190,7 @@ class ProfilePage {
                 {
                     id: 'club_2',
                     name: '摄影社',
-                    logo: 'https://via.placeholder.com/100x100/f093fb/ffffff?text=摄影',
+                    logo: 'data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23f093fb%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%91%84%E5%BD%B1%3C/text%3E%3C/svg%3E',
                     category: 'art',
                     description: '用镜头记录美好瞬间',
                     memberCount: 28,
@@ -199,7 +199,7 @@ class ProfilePage {
                 {
                     id: 'club_3',
                     name: '辩论社',
-                    logo: 'https://via.placeholder.com/100x100/4facfe/ffffff?text=辩论',
+                    logo: 'data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%234facfe%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E8%BE%A9%E8%AE%BA%3C/text%3E%3C/svg%3E',
                     category: 'academic',
                     description: '思辨明理，口才训练',
                     memberCount: 32,
@@ -211,7 +211,7 @@ class ProfilePage {
             clubsList.innerHTML = joinedClubs.map(club => `
         <div class="club-card">
           <img src="${club.logo}" alt="${club.name}" class="club-logo" 
-               onerror="this.src='https://via.placeholder.com/100x100/cccccc/ffffff?text=社团'">
+               onerror="this.src='data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22100%22%20height%3D%22100%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23cccccc%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E7%A4%BE%E5%9B%A2%3C/text%3E%3C/svg%3E'">
           <div class="club-info">
             <h3 class="club-name">${club.name}</h3>
             <p class="club-category">${this.getCategoryName(club.category)}</p>
@@ -238,7 +238,7 @@ class ProfilePage {
                 {
                     id: 'act_1',
                     title: '编程社团技术分享会',
-                    image: 'https://via.placeholder.com/300x200/667eea/ffffff?text=活动',
+                    image: 'data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22200%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23667eea%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2218%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%B4%BB%E5%8A%A8%3C/text%3E%3C/svg%3E',
                     organizer: '编程爱好者协会',
                     startTime: '2024-01-15',
                     endTime: '2024-01-15',
@@ -248,7 +248,7 @@ class ProfilePage {
                 {
                     id: 'act_2',
                     title: '摄影社户外拍摄活动',
-                    image: 'https://via.placeholder.com/300x200/f093fb/ffffff?text=活动',
+                    image: 'data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22200%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23f093fb%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2218%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%B4%BB%E5%8A%A8%3C/text%3E%3C/svg%3E',
                     organizer: '摄影社',
                     startTime: '2024-01-12',
                     endTime: '2024-01-12',
@@ -258,7 +258,7 @@ class ProfilePage {
                 {
                     id: 'act_3',
                     title: '辩论社内部训练',
-                    image: 'https://via.placeholder.com/300x200/4facfe/ffffff?text=活动',
+                    image: 'data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22200%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%234facfe%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2218%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%B4%BB%E5%8A%A8%3C/text%3E%3C/svg%3E',
                     organizer: '辩论社',
                     startTime: '2024-01-20',
                     endTime: '2024-01-20',
@@ -272,7 +272,7 @@ class ProfilePage {
         <div class="activity-card">
           <div class="activity-image">
             <img src="${activity.image}" alt="${activity.title}" 
-                 onerror="this.src='https://via.placeholder.com/300x200/cccccc/ffffff?text=活动'">
+                 onerror="this.src='data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22200%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23cccccc%22/%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2252%25%22%20font-size%3D%2218%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20fill%3D%22%23ffffff%22%3E%E6%B4%BB%E5%8A%A8%3C/text%3E%3C/svg%3E'">
             <div class="activity-status status-${activity.status}">
               ${activity.status === 'completed' ? '已完成' : activity.status === 'upcoming' ? '待参加' : '进行中'}
             </div>

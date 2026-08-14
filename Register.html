@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="注册广东建设职业技术学院社团门户账号，加入社团、参与校园活动。">
+
   <title>注册 - 广东建设职业技术学院社团门户</title>
   <!-- 基础样式 -->
   <link rel="stylesheet" href="./css/base.css">
@@ -11,12 +13,8 @@
   <!-- 组件样式 -->
   <link rel="stylesheet" href="./css/components/navbar.css">
   <link rel="stylesheet" href="./css/components/form.css">
-  <!-- 3.0 预留：框架样式 -->
-  <link rel="stylesheet" href="./css/framework.css" id="framework-styles" disabled>
 </head>
 <body data-page="register">
-<!-- 3.0 预留：框架根节点 -->
-<div id="vue-app" style="display: none;"></div>
 
 <!-- 2.x 内容容器 -->
 <div id="app">
@@ -87,19 +85,7 @@
   </main>
 </div>
 
-<!-- 3.0 预留：框架入口 -->
-<script src="./js/framework.js" id="framework-js" disabled></script>
-
-<!-- 2.x 核心脚本 -->
-<script type="module">
-  // 3.0 预留：框架检测
-  if (window.useFramework) {
-    document.getElementById('vue-app').style.display = 'block';
-    document.getElementById('app').style.display = 'none';
-    document.getElementById('framework-styles').disabled = false;
-    document.getElementById('framework-js').disabled = false;
-  }
-</script>
+<!-- 核心脚本 -->
 <script type="module" src="./js/core/auth.js"></script>
 <script type="module" src="./js/core/api.js"></script>
 <script type="module" src="./js/core/utils.js"></script>

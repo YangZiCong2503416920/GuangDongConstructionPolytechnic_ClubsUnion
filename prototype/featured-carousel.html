@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="广建社联精选社团轮播展示原型，欣赏各社团精彩瞬间。">
+
   <title>精选社团 - 广建社联</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
@@ -111,6 +113,7 @@
       <!-- 控制按钮 -->
       <button class="carousel-control prev">❮</button>
       <button class="carousel-control next">❯</button>
+      <button class="carousel-control play-pause" id="carouselPlayPause" title="暂停播放" aria-label="暂停播放">⏸</button>
     </div>
   </div>
 </main>
@@ -168,8 +171,6 @@
         dot.classList.toggle('active', index === currentIndex);
       });
 
-      // 调试日志
-      console.log("当前索引:", currentIndex, "Transform:", translateXValue + "%");
     }
 
     // --- 切换到指定索引的幻灯片 ---
@@ -196,17 +197,60 @@
     nextBtn.addEventListener('click', nextSlide);
     prevBtn.addEventListener('click', prevSlide);
 
-    // --- 自动轮播 ---
-    let autoPlayInterval = setInterval(nextSlide, 3000);
+    // --- 自动轮播（支持暂停/播放） ---
+    let autoPlayInterval = null;
+    let isPlaying = true;
+    let userPaused = false;
+    const playPauseBtn = document.getElementById('carouselPlayPause');
 
-    // --- 鼠标悬停暂停自动播放 ---
-    const carouselElement = document.querySelector('.carousel');
-    if (carouselElement) {
-      carouselElement.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
-      carouselElement.addEventListener('mouseleave', () => {
-        autoPlayInterval = setInterval(nextSlide, 3000);
+    function updatePlayPauseBtn() {
+      if (playPauseBtn) {
+        playPauseBtn.textContent = isPlaying ? '⏸' : '▶';
+        playPauseBtn.title = isPlaying ? '暂停播放' : '继续播放';
+        playPauseBtn.setAttribute('aria-label', playPauseBtn.title);
+      }
+    }
+
+    function startAutoPlay() {
+      if (autoPlayInterval) return;
+      autoPlayInterval = setInterval(nextSlide, 3000);
+      isPlaying = true;
+      updatePlayPauseBtn();
+    }
+
+    function stopAutoPlay() {
+      clearInterval(autoPlayInterval);
+      autoPlayInterval = null;
+      isPlaying = false;
+      updatePlayPauseBtn();
+    }
+
+    // 暂停/播放按钮
+    if (playPauseBtn) {
+      playPauseBtn.addEventListener('click', function () {
+        if (isPlaying) {
+          userPaused = true;
+          stopAutoPlay();
+        } else {
+          userPaused = false;
+          startAutoPlay();
+        }
       });
     }
+
+    // 鼠标悬停暂停，移出后恢复（用户手动暂停时不移出恢复）
+    const carouselElement = document.querySelector('.carousel');
+    if (carouselElement) {
+      carouselElement.addEventListener('mouseenter', () => {
+        if (isPlaying) stopAutoPlay();
+      });
+      carouselElement.addEventListener('mouseleave', () => {
+        if (!userPaused) startAutoPlay();
+      });
+    }
+
+    // 开始自动轮播
+    startAutoPlay();
 
 
     // --- 导航栏逻辑 ---

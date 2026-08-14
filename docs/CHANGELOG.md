@@ -2,6 +2,29 @@
 
 所有值得注意的变更都记录在此文件中。
 
+## [v2.3.0] - 2026-01-15
+
+### 项目整理
+- **合并原型仓库**：将 v1.0 原型（原 HTML_FinalAssignment 仓库）并入本仓库 `prototype/` 目录，统一管理
+- **仓库卫生**：新增 .gitignore、移除 .idea/ 等 IDE 文件、压缩媒体资源（省约 2.9MB）、新增 LICENSE 与根目录 README
+
+### 修复问题
+- **链接大小写修复**：修复 6 个页面的 `register.html` 大小写问题（Linux/GitHub Pages 上会 404）
+- **移除 framework 死代码**：清理 5 个页面残留的 framework.css/js 引用与"3.0 预留"框架检测代码
+- **模块导出修复**：api.js/utils.js 补充缺失的命名导出（fetchActivities/fetchActivityById/registerForActivity/showNotification/formatDate 等），修复首页与活动详情页加载报错
+- **外部依赖移除**：将 64 处 via.placeholder.com 外部图片替换为本地 SVG data URI，不再依赖外网
+- **原型导航修复**：修复 prototype/featured/ 子页面 `index.html` 链接错误（改为 `../index.html`）
+- **重写活动详情页逻辑**：activity-detail.js 与页面实际结构对齐，报名/分享功能可用
+
+### 新增功能
+- **注册页**：完整表单校验（学号、姓名、密码、手机号、协议勾选），模拟注册流程
+- **找回密码页**：验证码获取（60 秒倒计时）、表单校验、密码重置流程
+- **关于页**：滚动渐显动画 + 返回顶部按钮
+- **原型·社团详情模态框**：点击"了解详情"弹出社团介绍
+- **原型·分类筛选 + 名称搜索**：4 大分类快捷筛选与实时搜索
+- **原型·轮播暂停/播放**：轮播图支持暂停与继续，悬停自动暂停
+- **SEO 优化**：全部 18 个页面补充 meta description
+
 ## [v2.2.0] - 2024-01-20
 
 ### 新增功能
