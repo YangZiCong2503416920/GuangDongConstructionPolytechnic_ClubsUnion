@@ -5,6 +5,10 @@ const CATEGORY_NAMES = {
     academic: '学术', art: '艺术', sports: '体育',
     'public-service': '公益服务', culture: '文化', technology: '技术', other: '其他'
 };
+const CATEGORY_ICONS = {
+    academic: '🎓', art: '🎨', sports: '⚽',
+    'public-service': '🤝', culture: '📚', technology: '💻', other: '✨'
+};
 
 document.addEventListener('DOMContentLoaded', async () => {
     initializeNavigation();
@@ -25,7 +29,6 @@ function initializeNavigation() {
         });
     });
 
-    // 高亮当前页
     const currentPage = window.location.pathname.split('/').pop();
     const homeLink = document.querySelector('.nav-link[href="index.html"]');
     if (currentPage === '' || currentPage === 'index.html') {
@@ -59,27 +62,27 @@ function renderStats(clubs) {
     set('total-events', Math.min(clubs.length * 3, 80));
 }
 
-// 最新社团（取前 6 个）
+// 最新社团（深色卡片）
 function renderLatestClubs(clubs) {
     const container = document.getElementById('latest-clubs');
     if (!container) return;
 
     const latest = clubs.slice(0, 6);
     container.innerHTML = latest.map(club => `
-      <div class="club-card" data-id="${club.id}">
-        <img src="${club.logo || ''}" alt="${club.name}" class="club-logo" onerror="this.style.display='none'">
-        <div class="club-info">
-          <h3 class="club-name">${club.name}</h3>
-          <p class="club-category">${CATEGORY_NAMES[club.category] || club.category}</p>
-          <p class="club-description">${club.description}</p>
-          <div class="club-stats">
-            <span class="member-count">成员: ${club.memberCount || 0}</span>
-            <span class="founded-date">成立: ${club.founded || '未知'}</span>
-          </div>
-          <div class="club-actions">
-            <button class="btn-primary" onclick="location.href='clubs.html'">了解详情</button>
+      <div class="h-club-card">
+        <div class="h-club-top">
+          <div class="h-club-logo">${CATEGORY_ICONS[club.category] || '✨'}</div>
+          <div class="h-club-head">
+            <h3 class="h-club-name">${club.name}</h3>
+            <span class="h-club-cat">${CATEGORY_NAMES[club.category] || club.category}</span>
           </div>
         </div>
+        <p class="h-club-desc">${club.description}</p>
+        <div class="h-club-meta">
+          <span>👥 成员 ${club.memberCount || 0}</span>
+          <span>🗓 ${club.founded || '未知'}</span>
+        </div>
+        <a class="h-club-link" href="clubs.html">了解社团 →</a>
       </div>
     `).join('');
 
@@ -87,7 +90,7 @@ function renderLatestClubs(clubs) {
     if (loading) loading.style.display = 'none';
 }
 
-// 热门活动（取前 6 个）
+// 热门活动（深色卡片）
 function renderPopularActivities(clubs) {
     const container = document.getElementById('popular-activities');
     if (!container) return;
@@ -110,21 +113,20 @@ function renderPopularActivities(clubs) {
     });
 
     container.innerHTML = activities.map(a => `
-      <div class="activity-card" data-id="${a.id}">
-        <div class="activity-image">
-          <div class="activity-status status-upcoming">即将开始</div>
+      <div class="h-act-card">
+        <div class="h-act-top">
+          <span class="h-act-tag">${CATEGORY_NAMES[a.category] || a.category}</span>
+          <span class="h-act-status">即将开始</span>
         </div>
-        <div class="activity-info">
-          <h3 class="activity-title">${a.title}</h3>
-          <p class="activity-organizer">主办方: ${a.organizer}</p>
-          <div class="activity-meta">
-            <span class="activity-time">时间: ${a.startTime}</span>
-            <span class="activity-location">地点: ${a.location}</span>
-          </div>
-          <div class="activity-stats">
-            <span class="participants">报名: ${a.currentParticipants}/${a.maxParticipants}</span>
-            <span class="category">${CATEGORY_NAMES[a.category] || a.category}</span>
-          </div>
+        <h3 class="h-act-title">${a.title}</h3>
+        <p class="h-act-organizer">主办方 · ${a.organizer}</p>
+        <div class="h-act-meta">
+          <span>🕐 ${a.startTime}</span>
+          <span>📍 ${a.location}</span>
+        </div>
+        <div class="h-act-footer">
+          <span class="h-act-count">${a.currentParticipants}/${a.maxParticipants} 已报名</span>
+          <a class="h-act-link" href="activity-detail.html?id=${a.id}">了解详情 →</a>
         </div>
       </div>
     `).join('');
