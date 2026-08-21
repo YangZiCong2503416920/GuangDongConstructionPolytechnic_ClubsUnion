@@ -400,3 +400,141 @@
     z-index: -1;
     pointer-events: none;
 }
+
+/* ============================================================
+   电影感 Hero 首页（v2.3.0 视觉升级）
+   ============================================================ */
+
+/* 首页深色底，衬托圆角 Hero 卡片 */
+body[data-page="home"] {
+    background: #0b0f17;
+}
+
+/* Hero 圆角卡片 */
+.hero {
+    position: relative;
+    min-height: calc(100vh - 28px);
+    margin: 14px;
+    border-radius: 28px;
+    overflow: hidden;
+    background:
+        linear-gradient(180deg, rgba(10, 14, 20, 0.32) 0%, rgba(10, 14, 20, 0.10) 45%, rgba(10, 14, 20, 0.50) 100%),
+        url('../../assets/images/hero.jpg') center / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+/* 内嵌式导航（Hero 顶部） */
+.hero-nav {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 42px;
+}
+.hero-nav a { color: #fff; text-decoration: none; }
+.hero-brand {
+    font-family: 'Songti SC', 'SimSun', 'Noto Serif CJK SC', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+}
+.hero-links {
+    display: flex;
+    gap: 2.2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.hero-links a {
+    font-size: .95rem;
+    letter-spacing: .1em;
+    opacity: .88;
+    padding-bottom: 4px;
+    transition: opacity .2s ease;
+}
+.hero-links a:hover { opacity: 1; }
+.hero-links a.active { opacity: 1; border-bottom: 1.5px solid rgba(255, 255, 255, .9); }
+.hero-auth { display: flex; gap: 1rem; align-items: center; }
+.hero-auth-link { font-size: .95rem; opacity: .95; }
+.hero-auth-link:hover { opacity: 1; }
+.hero-auth-register {
+    background: rgba(255, 255, 255, .92);
+    color: #10151d !important;
+    padding: 9px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    opacity: 1 !important;
+    transition: background .2s ease;
+}
+.hero-auth-register:hover { background: #fff; }
+
+/* Hero 内容（居中） */
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 24px 70px;
+    z-index: 2;
+}
+.hero-title {
+    font-family: 'Songti SC', 'SimSun', 'Noto Serif CJK SC', serif;
+    font-size: clamp(2.6rem, 7vw, 5rem);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: .02em;
+    margin: 0 0 24px;
+    text-shadow: 0 2px 30px rgba(0, 0, 0, .4);
+}
+.hero-subtitle {
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, .88);
+    max-width: 46ch;
+    margin: 0 0 38px;
+    font-weight: 300;
+}
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    color: #10151d;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 15px 34px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .28);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .35);
+}
+
+/* 深色背景上的内容容器（居中、留出深色边缘） */
+.content-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 2rem 14px 0;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .hero { min-height: calc(100vh - 20px); margin: 10px; border-radius: 20px; }
+    .hero-nav { padding: 20px 22px; }
+    .hero-links { display: none; } /* 小屏隐藏中间导航，保留品牌与登录注册 */
+    .hero-brand { font-size: 1.05rem; }
+    .hero-title { font-size: clamp(2rem, 9vw, 3rem); }
+    .hero-subtitle { font-size: .95rem; padding: 0 8px; }
+    .hero-btn { padding: 13px 28px; }
+    .content-container { padding: 1rem 10px 0; }
+}
+
